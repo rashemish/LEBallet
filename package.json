@@ -1,0 +1,24 @@
+{
+  "name": "leballet",
+  "version": "1.0.0",
+  "description": "This is a repository for hosting experimental designs and development for Lake Erie Ballet Company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rashemish/LEBallet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rashemish/LEBallet/issues"
+  },
+  "homepage": "https://github.com/rashemish/LEBallet#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
