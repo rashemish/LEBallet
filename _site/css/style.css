@@ -1,0 +1,26 @@
+.hero {
+    background-image: url('/assets/hero-dance.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    flex: 1;
+    border-radius: 8px;
+}
+
+nav ul { display: flex; list-style: none; gap: 15px; }
