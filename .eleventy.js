@@ -1,7 +1,11 @@
 module.exports = function (eleventyConfig) {
+
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/assets");
-    eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "/" });
+
+    eleventyConfig.addFilter("base", function(url) {
+        return "/LEBallet" + url;
+    });
 
     return {
         dir: {

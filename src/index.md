@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <section class="hero">
- <img src="{{ '/assets/landing_page.png' | url }}" alt="Ballet Hero">
+ <img src="{{ '/assets/landing_page.png' | base }}" alt="Ballet Hero">
 
   <div class="hero-content fade-in">
     <h1>Lake Erie Ballet Company</h1>
