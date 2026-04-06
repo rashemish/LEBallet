@@ -1,40 +1,17 @@
 ---
-layout: base
-title: Home | LEBallet
-permalink: "index.html"
+layout: layouts/base.njk
+title: Home
+permalink: /
 ---
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to LEBallet</h1>
-        <p>Experience the grace and power of dance.</p>
-    </div>
-</section>
+ <img src="/assets/landing_page.png" alt="Ballet Hero">
 
-<section class="grid-section">
-    <h2>Our Classes</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Beginner Ballet</h3>
-            <p>Perfect for those starting their journey.</p>
-        </div>
-        <div class="card">
-            <h3>Advanced Pointe</h3>
-            <p>Refining technique and strength.</p>
-        </div>
-    </div>
-</section>
-
-<section class="grid-section">
-    <h2>Upcoming Performances</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Spring Gala</h3>
-            <p>March 2026</p>
-        </div>
-        <div class="card">
-            <h3>Winter Nutcracker</h3>
-            <p>December 2026</p>
-        </div>
-    </div>
+  <div class="hero-content fade-in">
+    <h1>Lake Erie Ballet Company</h1>
+    <p>
+      Welcome to the Lake Erie Ballet Company website. LEB is committed
+      to artistry, innovation, and community.
+    </p>
+  </div>
 </section>

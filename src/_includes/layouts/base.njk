@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+{% include "partials/header.njk" %}
+{% include "partials/menu.njk" %}
+{% include "partials/search.njk" %}
+
+<main>
+  {{ content | safe }}
+</main>
+
+{% include "partials/footer.njk" %}
+
+<script>
+        function toggleMenu() {
+        document.getElementById("drawerMenu").classList.toggle("open");
+        document.getElementById("drawerOverlay").classList.toggle("show");
+    }
+
+  function openSearch() {
+    document.getElementById("searchOverlay").style.display = "flex";
+  }
+
+  function closeSearch() {
+    document.getElementById("searchOverlay").style.display = "none";
+  }
+
+  document.querySelectorAll(".item button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      content.style.display =
+        content.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+<script>
+    document.querySelectorAll(".support-item button").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            content.style.display =
+                content.style.display === "block" ? "none" : "block";
+        });
+    });
+</script>
+
+</body>
+</html>

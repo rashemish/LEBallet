@@ -1,21 +1,13 @@
 module.exports = function (eleventyConfig) {
-   // Copy `_src/img/` to `_site/img`
-   eleventyConfig.addPassthroughCopy("src/img");
-   eleventyConfig.addPassthroughCopy("src/style.css");
-   eleventyConfig.addPassthroughCopy({ "src/img/favicon.ico": "/" });
+    eleventyConfig.addPassthroughCopy("src/css");
+    eleventyConfig.addPassthroughCopy("src/assets");
+    eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "/" });
 
-
- return {
-   dir: {
-     input: "src",
-     output: '_site'
-
-
-  },
-
-
-};
-  
-
-
+    return {
+        dir: {
+            input: "src",
+            includes: "_includes",
+            output: "_site"
+        }
+    };
 };
