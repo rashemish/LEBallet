@@ -1,7 +1,7 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 title: Home
-permalink: /index/
+permalink: /
 ---
 
 <section class="hero">
