@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission | Lake Erie Ballet Company</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="/" class="logo-link">
+      <img src="/img/leb-logo.png" alt="Lake Erie Ballet Company logo" class="site-logo">
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="/">HOME</a>
+      <a href="#">ERIE'S NUTCRACKER</a>
+      <a href="#">REGIONAL DANCE AMERICA</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="/">HOME</a>
+    <a href="#">ERIE'S NUTCRACKER</a>
+    <a href="#">REGIONAL DANCE AMERICA</a>
+  </nav>
+
+  <main>
+    <section class="mission-hero">
+  <div class="slideshow-layer active" style="background-image: url('/img/mission1.jpg');"></div>
+  <div class="slideshow-layer" style="background-image: url('/img/mission2.jpg');"></div>
+  <div class="slideshow-layer" style="background-image: url('/img/mission3.jpg');"></div>
+  <div class="mission-overlay"></div>
+  <div class="fade-to-white"></div>
+</section>
+<section class="mission-content">
+  <h1>Inspiring Movement. Enriching Our Community.</h1>
+  <p class="mission-intro">
+    This mission guides everything we do at Lake Erie Ballet Company.
+  </p>
+  <div class="mission-block">
+    <p>
+      Lake Erie Ballet Company is a not-for-profit organization dedicated to providing a high-quality
+      pre-professional dance experience for dancers from local studios throughout the region. We welcome
+      young artists to join us in creating inspiring performances for the Erie community. Through collaboration
+      with Erie County schools and regional arts organizations, we strive to enrich the cultural landscape and
+      nurture the next generation of performers.
+    </p>
+  </div>
+  <div class="mission-block">
+    <h2>Our Commitment</h2>
+    <p>
+      Founded in 1957 as Erie Civic Ballet, Lake Erie Ballet Company (LEBC) is committed to promoting the
+      diversity of talent in Erie County by building partnerships with local dance organizations. All dancers
+      who audition participate in a positive and inspirational learning environment where skilled training and
+      mentorship are offered through exposure to professional artistic directors, rehearsal directors, designers,
+      and backstage technicians.
+    </p>
+  </div>
+  <div class="mission-block">
+    <h2>An Erie Tradition</h2>
+    <p>
+      Dancers gain firsthand experience in the profession of dance through active participation in auditions and
+      rehearsals that culminate in performances of the annual Erie tradition of The Nutcracker.
+    </p>
+  </div>
+</section>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="/img/leb-logo.png" class="footer-logo" alt="LEB logo">
+      <h3>Lake Erie Ballet Company</h3>
+      <p class="footer-description">
+        Bringing performance, education, and community engagement
+        through ballet to the Erie community.
+      </p>
+
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>2539 West 12th Street</p>
+      <p>Erie, PA 16505</p>
+      <p>(814) 833-9244</p>
+      <p>christinamaria@lakeerieballetcompany.org</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Lake Erie Ballet Company. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    if (menuToggle && mobileNav) {
+      menuToggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("show");
+      });
+    }
+
+    const slides = document.querySelectorAll(".slideshow-layer");
+
+    if (slides.length > 0) {
+      let currentSlide = 0;
+
+      setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>

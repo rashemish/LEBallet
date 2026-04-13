@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lake Erie Ballet Company</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="/" class="logo-link">
+      <img src="/img/leb-logo.png" alt="Lake Erie Ballet Company logo" class="site-logo">
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="/">HOME</a>
+      <a href="#">ERIE'S NUTCRACKER</a>
+      <a href="#">REGIONAL DANCE AMERICA</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="/">HOME</a>
+    <a href="#">ERIE'S NUTCRACKER</a>
+    <a href="#">REGIONAL DANCE AMERICA</a>
+  </nav>
+
+  <main>
+    <section class="home-hero-image">
+  <div class="hero-overlay">
+    <div class="hero-content-wrap">
+      <h1>Lake Erie Ballet Company</h1>
+      <p>
+        Performance, education, and community engagement through ballet.
+      </p>
+      <a href="/mission/" class="main-button">Our Mission</a>
+    </div>
+  </div>
+</section>
+<section class="home-cards-section">
+  <div class="home-card">
+    <img src="/img/mission1.jpg" alt="Performance placeholder image">
+    <div class="home-card-content">
+      <h2>Performance</h2>
+      <p>
+        Presenting ballet experiences for Erie audiences through inspiring productions and artistic storytelling.
+      </p>
+    </div>
+  </div>
+  <div class="home-card">
+    <img src="/img/mission2.jpg" alt="Education placeholder image">
+    <div class="home-card-content">
+      <h2>Education</h2>
+      <p>
+        Supporting artistic growth through dance learning opportunities that build technique, confidence, and creativity.
+      </p>
+    </div>
+  </div>
+  <div class="home-card">
+    <img src="/img/mission3.jpg" alt="Community placeholder image">
+    <div class="home-card-content">
+      <h2>Community</h2>
+      <p>
+        Building connection through outreach and engagement that strengthens relationships with dancers, families, and audiences.
+      </p>
+    </div>
+  </div>
+</section>
+  </main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="/img/leb-logo.png" class="footer-logo" alt="LEB logo">
+      <h3>Lake Erie Ballet Company</h3>
+      <p class="footer-description">
+        Bringing performance, education, and community engagement
+        through ballet to the Erie community.
+      </p>
+
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>2539 West 12th Street</p>
+      <p>Erie, PA 16505</p>
+      <p>(814) 833-9244</p>
+      <p>christinamaria@lakeerieballetcompany.org</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Lake Erie Ballet Company. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    if (menuToggle && mobileNav) {
+      menuToggle.addEventListener("click", () => {
+        mobileNav.classList.toggle("show");
+      });
+    }
+
+    const slides = document.querySelectorAll(".slideshow-layer");
+
+    if (slides.length > 0) {
+      let currentSlide = 0;
+
+      setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>

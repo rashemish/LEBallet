@@ -1,39 +1,48 @@
 ---
 layout: base.njk
-title: Home | LEBallet
+title: Lake Erie Ballet Company
 ---
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to LEBallet</h1>
-        <p>Experience the grace and power of dance.</p>
+<section class="home-hero-image">
+  <div class="hero-overlay">
+    <div class="hero-content-wrap">
+      <h1>Lake Erie Ballet Company</h1>
+      <p>
+        Performance, education, and community engagement through ballet.
+      </p>
+      <a href="/mission/" class="main-button">Our Mission</a>
     </div>
+  </div>
 </section>
 
-<section class="grid-section">
-    <h2>Our Classes</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Beginner Ballet</h3>
-            <p>Perfect for those starting their journey.</p>
-        </div>
-        <div class="card">
-            <h3>Advanced Pointe</h3>
-            <p>Refining technique and strength.</p>
-        </div>
+<section class="home-cards-section">
+  <div class="home-card">
+    <img src="/img/mission1.jpg" alt="Performance placeholder image">
+    <div class="home-card-content">
+      <h2>Performance</h2>
+      <p>
+        Presenting ballet experiences for Erie audiences through inspiring productions and artistic storytelling.
+      </p>
     </div>
-</section>
+  </div>
 
-<section class="grid-section">
-    <h2>Upcoming Performances</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Spring Gala</h3>
-            <p>March 2026</p>
-        </div>
-        <div class="card">
-            <h3>Winter Nutcracker</h3>
-            <p>December 2026</p>
-        </div>
+  <div class="home-card">
+    <img src="/img/mission2.jpg" alt="Education placeholder image">
+    <div class="home-card-content">
+      <h2>Education</h2>
+      <p>
+        Supporting artistic growth through dance learning opportunities that build technique, confidence, and creativity.
+      </p>
     </div>
+  </div>
+
+  <div class="home-card">
+    <img src="/img/mission3.jpg" alt="Community placeholder image">
+    <div class="home-card-content">
+      <h2>Community</h2>
+      <p>
+        Building connection through outreach and engagement that strengthens relationships with dancers, families, and audiences.
+      </p>
+    </div>
+  </div>
 </section>
