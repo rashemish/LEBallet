@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Gallery | LEBallet</title>
     <base href="/LEBallet/">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
@@ -15,7 +17,7 @@
 <header class="nav">
     <div class="logo">
         <a href="/">
-            <img src="assets/LEB_logo_p.png" alt="Lake Erie Ballet Logo">
+            <img src="/assets/LEB_logo_p.png" alt="Lake Erie Ballet Logo">
         </a>
     </div>
 
@@ -55,13 +57,80 @@
 </div>
 
 <main>
-  
+  <div class="whole">
+<div class="container">
+<img src="/assets/all-blur.jpg" class="title"/>
+<div class="centered">
+    <h1>Erie Ballet Company</h1>
+    <p>Gallery</p>
+</div>
+</div>
+<div class="box">
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/jump1.webp" alt="Forest">
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/jump2.webp" alt="Forest">
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/jump3.webp" alt="Forest">
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/diavolo.webp" alt="Forest">
+  </div>
+</div>
+<div class="responsiveLong">
+    <div class="gallery">
+        <img src="/assets/headshot1.webp" alt="Forest"/>
+    </div>
+</div>
+<div class="responsiveLong">
+    <div class="gallery">
+        <img src="/assets/prayer.webp" alt="Forest"/>
+    </div>
+</div>
+</div>
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+</div>
+<script>
+var modal = document.getElementById('myModal');
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+  modal.style.display = "none";
+};
+
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var i;
+for (i = 0; i < images.length; i++) {
+  images[i].onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.nextElementSibling.innerHTML;
+  }
+}
+</script>
+</div>
+
 </main>
 
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-left">
-            <img src="assets/LEB_logo.png" alt="Lake Erie Ballet Logo" class="footer-logo">
+            <img src="/assets/LEB_logo.png" alt="Lake Erie Ballet Logo" class="footer-logo">
             <p class="address">
                 2539 W 12TH ST,<br>
                 ERIE, PA 16505
