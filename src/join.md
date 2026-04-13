@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: Home | LEBallet
-permalink: /join/
+title: Join | LEBallet
+permalink: "join.html"
 ---
 
 <section class="hero">

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: Home
-permalink: /
+title: Home | LEBallet
+permalink: "index.html"
 ---
 
 <section class="hero">

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: Support
-permalink: /support/
+title: Support | LEBallet
+permalink: "support.html"
 ---
 <section class="support-page">
  <section class="hero support-hero">

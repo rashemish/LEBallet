@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: About
-permalink: /about/
+title: About | LEBallet
+permalink: "about.html"
 ---
 
 About Us

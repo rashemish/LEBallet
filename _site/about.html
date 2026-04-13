@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <title>About | LEBallet</title>
+    <base href="/LEBallet/">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 <header class="nav">
     <div class="logo">
         <a href="/">
-            <img src="/assets/LEB_logo_p" alt="Lake Erie Ballet Logo">
+            <img src="assets/LEB_logo_p.png" alt="Lake Erie Ballet Logo">
         </a>
     </div>
 
@@ -38,11 +39,11 @@
     <button class="close-btn" onclick="toggleMenu()">✕</button>
 
     <a href="/" class="">HOME</a>
-    <a href="/about/" class="">ABOUT US</a>
-    <a href="/performances/" class="">EVENTS</a>
-    <a href="/classes/" class="">JOIN LEBC</a>
-    <a href="/support/" class="">SUPPORT</a>
-    <a href="/contact/" class="">CONTACT</a>
+    <a href="/about" class="">ABOUT US</a>
+    <a href="/events" class="">EVENTS</a>
+    <a href="/join" class="">JOIN THE LEBC</a>
+    <a href="/support" class="">SUPPORT</a>
+    <a href="/contact" class="">CONTACT</a>
 </nav>
 
 <div id="drawerOverlay" class="drawer-overlay" onclick="toggleMenu()"></div>
@@ -54,22 +55,15 @@
 </div>
 
 <main>
-  <section class="hero">
- <img src="/assets/landing_page.png" alt="Ballet Hero">
-  <div class="hero-content fade-in">
-    <h1>Lake Erie Ballet Company</h1>
-    <p>
-      Welcome to the Lake Erie Ballet Company website. LEB is committed
-      to artistry, innovation, and community.
-    </p>
-  </div>
-</section>
+  <p>About Us</p>
+<p>Lake Erie Ballet Company is dedicated to artistic excellence and community engagement.</p>
+
 </main>
 
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-left">
-            <img src="/assets/LEB_logo.png" alt="Lake Erie Ballet Logo" class="footer-logo">
+            <img src="assets/LEB_logo.png" alt="Lake Erie Ballet Logo" class="footer-logo">
             <p class="address">
                 2539 W 12TH ST,<br>
                 ERIE, PA 16505
@@ -119,16 +113,14 @@
         content.style.display === "block" ? "none" : "block";
     });
   });
-</script>
 
-<script>
-    document.querySelectorAll(".support-item button").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const content = btn.nextElementSibling;
-            content.style.display =
-                content.style.display === "block" ? "none" : "block";
+        document.querySelectorAll(".support-item button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.style.display =
+                    content.style.display === "block" ? "none" : "block";
+            });
         });
-    });
 </script>
 
 </body>

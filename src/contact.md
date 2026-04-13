@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: Home | LEBallet
-permalink: /contact/
+title: Contact | LEBallet
+permalink: "contact.html"
 ---
 <section class="support-page">
  <section class="hero support-hero">
@@ -46,4 +46,5 @@ permalink: /contact/
       <button type="submit">Submit</button>
     </form>
   </div>
+</section>
 </section>
