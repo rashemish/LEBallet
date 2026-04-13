@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Home | LEBallet</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <base href="/LEBallet/">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 <header class="nav">
     <div class="logo">
         <a href="/">
-            <img src="/assets/LEB_logo_p" alt="Lake Erie Ballet Logo">
+            <img src="assets/LEB_logo_p.png" alt="Lake Erie Ballet Logo">
         </a>
     </div>
 
@@ -38,11 +39,11 @@
     <button class="close-btn" onclick="toggleMenu()">✕</button>
 
     <a href="/" class="">HOME</a>
-    <a href="/about/" class="">ABOUT US</a>
-    <a href="/performances/" class="">EVENTS</a>
-    <a href="/classes/" class="">JOIN LEBC</a>
-    <a href="/support/" class="">SUPPORT</a>
-    <a href="/contact/" class="active">CONTACT</a>
+    <a href="about/" class="">ABOUT US</a>
+    <a href="performances/" class="">EVENTS</a>
+    <a href="classes/" class="">JOIN THE LEBC</a>
+    <a href="support/" class="">SUPPORT</a>
+    <a href="contact/" class="active">CONTACT</a>
 </nav>
 
 <div id="drawerOverlay" class="drawer-overlay" onclick="toggleMenu()"></div>
@@ -54,13 +55,53 @@
 </div>
 
 <main>
-  
+  <section class="support-page">
+ <section class="hero support-hero">
+    <img src="assets/contact_page.png" alt="Erie's Nutcracker Performance">
+    <div class="hero-content fade-in">
+      <h1>CONTACT US</h1>
+    </div>
+  </section>
+ <section class="contact-info">
+    <h3>OUR LOCATION</h3>
+    <p>
+      2539 West 12th Street, Erie, Pennsylvania 16505
+    </p>
+    <h3>CONTACT INFO</h3>
+    <p>
+      Phone: XXX-XXXX-XXXX<br>
+      Email: anemailtoday@gmail.com
+    </p>
+  </section>
+ <section class="contact-section">
+  <div class="contact-box">
+    <h3>OUR DROP BOX</h3>
+<p><form class="contact-form">
+<div class="row">
+<div class="field">
+<label>Name*</label>
+<input type="text" required>
+</div></p>
+<p><div class="field">
+<label>Email*</label>
+<input type="email" required>
+</div>
+</div></p>
+<p><div class="field">
+<label>Message*</label>
+<textarea rows="5" required></textarea>
+</div></p>
+<p><button type="submit">Submit</button>
+</form></p>
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-left">
-            <img src="/assets/LEB_logo.png" alt="Lake Erie Ballet Logo" class="footer-logo">
+            <img src="assets/LEB_logo.png" alt="Lake Erie Ballet Logo" class="footer-logo">
             <p class="address">
                 2539 W 12TH ST,<br>
                 ERIE, PA 16505
@@ -110,16 +151,14 @@
         content.style.display === "block" ? "none" : "block";
     });
   });
-</script>
 
-<script>
-    document.querySelectorAll(".support-item button").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const content = btn.nextElementSibling;
-            content.style.display =
-                content.style.display === "block" ? "none" : "block";
+        document.querySelectorAll(".support-item button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.style.display =
+                    content.style.display === "block" ? "none" : "block";
+            });
         });
-    });
 </script>
 
 </body>

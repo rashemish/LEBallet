@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ '/css/styles.css' | base }}">
+    <base href="/LEBallet/">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
@@ -42,16 +43,14 @@
         content.style.display === "block" ? "none" : "block";
     });
   });
-</script>
 
-<script>
-    document.querySelectorAll(".support-item button").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const content = btn.nextElementSibling;
-            content.style.display =
-                content.style.display === "block" ? "none" : "block";
+        document.querySelectorAll(".support-item button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.style.display =
+                    content.style.display === "block" ? "none" : "block";
+            });
         });
-    });
 </script>
 
 </body>
