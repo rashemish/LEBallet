@@ -667,6 +667,12 @@ div.gallery img {
     font-weight: bold;
     transition: 0.3s;
 }
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 .plus {
     position: absolute;
     bottom: 15px;
@@ -675,6 +681,12 @@ div.gallery img {
     font-size: 30px;
     font-weight: bold;
     transition: 0.3s;
+}
+.plus:hover,
+.plus:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 .minus {
     position: absolute;
@@ -685,8 +697,8 @@ div.gallery img {
     font-weight: bold;
     transition: 0.3s;
 }
-.close:hover,
-.close:focus {
+.minus:hover,
+.minus:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
