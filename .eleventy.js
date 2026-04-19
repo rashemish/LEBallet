@@ -1,7 +1,8 @@
 module.exports = function (eleventyConfig) {
 
-    eleventyConfig.addPassthroughCopy("/src/styles.css");
-    eleventyConfig.addPassthroughCopy("/src/assets");
+    eleventyConfig.addPassthroughCopy("/styles.css");
+    eleventyConfig.addPassthroughCopy("/assets");
+    eleventyConfig.addWatchTarget("src");
 
     return {
         markdownTemplateEngine: "njk",
@@ -11,5 +12,5 @@ module.exports = function (eleventyConfig) {
             includes: "_includes",
             output: "_site"
         }
-    };np
+    };
 };
