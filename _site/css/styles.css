@@ -557,7 +557,7 @@ body {
 
 /* gallery styles */
 /* Main image */
-.whole {
+.wholeB {
     min-height: 90vh;
     display:flex;
     flex-direction: column;
@@ -576,14 +576,14 @@ body {
 }
 h1.galHead {
     font-size: 100px;
-    color: #C9A6A1;
+    color: #f8eeed;
     font-family: "Aguafina Script", cursive;
     font-weight: 400;
     font-style: normal;
 }
 .galPara {
     font-size: 100px;
-    color: #C9A6A1;
+    color: #f8eeed;
     font-family: "Aguafina Script", cursive;
     font-weight: 400;
     font-style: normal;
@@ -659,7 +659,7 @@ div.gallery img {
     animation-duration: 0.6s;
 }
 .close {
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 35px;
     color: #f1f1f1;
@@ -674,11 +674,11 @@ div.gallery img {
     cursor: pointer;
 }
 .plus {
-    position: absolute;
+    position: fixed;
     bottom: 15px;
-    right: 35px;
+    right: 100px;
     color: #f1f1f1;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -689,7 +689,7 @@ div.gallery img {
     cursor: pointer;
 }
 .minus {
-    position: absolute;
+    position: fixed;
     bottom: 15px;
     right: 60px;
     color: #f1f1f1;
@@ -705,6 +705,63 @@ div.gallery img {
 }
 
 /* staff styles */
+.wholeP {
+    min-height: 90vh;
+    display:flex;
+    flex-direction: column;
+    background: #7f5a83;
+}
+.blank{
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+.blank::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.container-SBS {
+    display: inline-flex;
+    justify-content: center;
+}
+.card-info-left{
+    background-color: #b300b3;
+    width: 50%;
+    height: auto;
+    margin: 10px auto 10px 15px;
+    border-radius: 20px;
+}
+.card-info-right{
+    background-color: #b300b3;
+    width: 50%;
+    height: auto;
+    margin: 10px 15px 10px auto;
+    border-radius: 20px;
+}
+.card-img-left {
+    width: 35%;
+    height: 50%;
+    margin: 10px auto 10px 15px;
+    border-radius: 20px;
+}
+p.Wtext {
+    text-align: left;
+    font: 18px Georgia, Sans-Serif;
+    color: #FFF;
+    padding: 10px 20px;
+    margin: 10px 0 19.920px 10px;
+    text-indent: 50px;
+}
+h2.title {
+    text-align: left;
+    font: 25px Georgia, Sans-Serif;
+    color: #FFF;
+    padding: 15px 20px;
+    margin: 10px 0 19.920px 10px;
+}
 h1.sTitle{
     font: 50px Georgia, Sans-Serif;
     text-align: center;
@@ -718,25 +775,28 @@ div.list {
 div.list-item {
     margin: 30px 5px;
     width: 250px;
-    background-color: #ffcccc;
+    background-color: #C9A6A1;
 }
 
 div.list-item:hover {
-    border: #990099 1px solid;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 img.list-item{
     width: 100%;
     height: auto;
 }
-div.name {
+.name {
     font: 15px Georgia, Sans-Serif;
     padding: 3px;
 }
-div.name:hover {
-    text-decoration: underline;
-}
-div.role {
+.role {
     font: 15px Georgia, Sans-Serif;
     padding: 3px;
+}
+a.staff{
+    text-decoration: none;
+    color: #fffafa;
 }

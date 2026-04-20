@@ -4,7 +4,7 @@ title: Gallery | LEBallet
 permalink: "gallery.html"
 ---
 
-<div class="whole">
+<div class="wholeB">
 
 <div class="container">
 <img src="/assets/all-blur.jpg" class="title"/>
