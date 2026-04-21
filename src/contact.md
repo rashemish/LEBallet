@@ -1,11 +1,11 @@
 ---
 layout: layouts/base.njk
-title: Home | LEBallet
-permalink: /contact/
+title: Contact | LEBallet
+permalink: "contact.html"
 ---
 <section class="support-page">
  <section class="hero support-hero">
-    <img src="assets/contact_page.png" alt="Erie's Nutcracker Performance">
+    <img src="/assets/contact_page.png" alt="Erie's Nutcracker Performance">
     <div class="hero-content fade-in">
       <h1>CONTACT US</h1>
     </div>
@@ -46,4 +46,5 @@ permalink: /contact/
       <button type="submit">Submit</button>
     </form>
   </div>
+</section>
 </section>

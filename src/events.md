@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: Home | LEBallet
-permalink: /events/
+title: Events | LEBallet
+permalink: "events.html"
 ---
 
 <section class="hero">

@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | LEBallet</title>
+  <title>Gallery | LEBallet</title>
+    <base href="/LEBallet/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
 
- <link rel="stylesheet" href="/css/styles.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -40,11 +42,13 @@
     <button class="close-btn" onclick="toggleMenu()">✕</button>
 
     <a href="/" class="">HOME</a>
-    <a href="about/" class="">ABOUT US</a>
-    <a href="performances/" class="">EVENTS</a>
-    <a href="classes/" class="">JOIN THE LEBC</a>
-    <a href="support/" class="">SUPPORT</a>
-    <a href="contact/" class="active">CONTACT</a>
+    <a href="/about" class="">ABOUT US</a>
+    <a href="/events" class="">EVENTS</a>
+    <a href="/join" class="">JOIN THE LEBC</a>
+    <a href="/gallery" class="">GALLERY</a>
+    <a href="/support" class="">SUPPORT</a>
+    <a href="/contact" class="">CONTACT</a>
+    <a href="/staff" class="">STAFF</a>
 </nav>
 
 <div id="drawerOverlay" class="drawer-overlay" onclick="toggleMenu()"></div>
@@ -56,46 +60,87 @@
 </div>
 
 <main>
-  <section class="support-page">
- <section class="hero support-hero">
-    <img src="assets/contact_page.png" alt="Erie's Nutcracker Performance">
-    <div class="hero-content fade-in">
-      <h1>CONTACT US</h1>
-    </div>
-  </section>
- <section class="contact-info">
-    <h3>OUR LOCATION</h3>
-    <p>
-      2539 West 12th Street, Erie, Pennsylvania 16505
-    </p>
-    <h3>CONTACT INFO</h3>
-    <p>
-      Phone: XXX-XXXX-XXXX<br>
-      Email: anemailtoday@gmail.com
-    </p>
-  </section>
- <section class="contact-section">
-  <div class="contact-box">
-    <h3>OUR DROP BOX</h3>
-<p><form class="contact-form">
-<div class="row">
-<div class="field">
-<label>Name*</label>
-<input type="text" required>
-</div></p>
-<p><div class="field">
-<label>Email*</label>
-<input type="email" required>
+  <div class="wholeB">
+<div class="container">
+<img src="/assets/all-blur.jpg" class="title"/>
+<div class="centered">
+    <h1 class="galHead">Erie Ballet Company</h1>
+    <p class="galPara">Gallery</p>
 </div>
-</div></p>
-<p><div class="field">
-<label>Message*</label>
-<textarea rows="5" required></textarea>
-</div></p>
-<p><button type="submit">Submit</button>
-</form></p>
+</div>
+<div class="box">
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/jump1.webp" class="target" alt="Forest">
   </div>
-</section>
+</div>
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/jump2.webp" class="target" alt="Forest">
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/jump3.webp" class="target" alt="Forest">
+  </div>
+</div>
+<div class="responsive">
+  <div class="gallery">
+      <img src="/assets/diavolo.webp" class="target" alt="Forest">
+  </div>
+</div>
+<div class="responsiveLong">
+    <div class="gallery">
+        <img src="/assets/headshot1.webp" class="target" alt="Forest"/>
+    </div>
+</div>
+<div class="responsiveLong">
+    <div class="gallery">
+        <img src="/assets/prayer.webp" class="target" alt="Forest"/>
+    </div>
+</div>
+</div>
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <span class="plus">+</span>
+  <span class="minus">-</span>
+  <img class="modal-content" id="img01">
+</div>
+<script>
+var modal = document.getElementById('myModal');
+
+var close = document.getElementsByClassName("close")[0];
+
+var plus = document.getElementsByClassName("plus")[0];
+
+var minus = document.getElementsByClassName("minus")[0];
+
+close.onclick = function() { 
+  modal.style.display = "none";
+};
+plus.onclick = function() {
+if (modalImg.currentCSSZoom < 2){
+    modalImg.style.zoom = modalImg.currentCSSZoom + 0.1;
+}
+};
+minus.onclick = function() {
+if (modalImg.currentCSSZoom > .5){
+    modalImg.style.zoom = modalImg.currentCSSZoom - 0.1;
+}
+};
+
+var images = document.getElementsByClassName('target');
+var modalImg = document.getElementById("img01");
+var i;
+for (i = 0; i < images.length; i++) {
+  images[i].onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+  }
+}
+</script>
+</div>
 
 </main>
 
@@ -132,54 +177,34 @@
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("drawerMenu")?.classList.toggle("open");
-  document.getElementById("drawerOverlay")?.classList.toggle("show");
-}
+        function toggleMenu() {
+        document.getElementById("drawerMenu").classList.toggle("open");
+        document.getElementById("drawerOverlay").classList.toggle("show");
+    }
 
-function openSearch() {
-  const searchOverlay = document.getElementById("searchOverlay");
-  if (searchOverlay) {
-    searchOverlay.style.display = "flex";
+  function openSearch() {
+    document.getElementById("searchOverlay").style.display = "flex";
   }
-}
 
-function closeSearch() {
-  const searchOverlay = document.getElementById("searchOverlay");
-  if (searchOverlay) {
-    searchOverlay.style.display = "none";
+  function closeSearch() {
+    document.getElementById("searchOverlay").style.display = "none";
   }
-}
 
-document.querySelectorAll(".support-item button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const content = btn.nextElementSibling;
-    content.style.display =
-      content.style.display === "block" ? "none" : "block";
+  document.querySelectorAll(".item button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      content.style.display =
+        content.style.display === "block" ? "none" : "block";
+    });
   });
-});
 
-const missionImages = [
-  "/assets/mission1.jpg",
-  "/assets/mission2.jpg",
-  "/assets/mission3.jpg"
-];
-
-const missionImg = document.getElementById("mission-slideshow");
-
-if (missionImg) {
-  let current = 0;
-
-  setInterval(() => {
-    missionImg.style.opacity = "0";
-
-    setTimeout(() => {
-      current = (current + 1) % missionImages.length;
-      missionImg.src = missionImages[current];
-      missionImg.style.opacity = "1";
-    }, 500);
-  }, 4200);
-}
+        document.querySelectorAll(".support-item button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.style.display =
+                    content.style.display === "block" ? "none" : "block";
+            });
+        });
 </script>
 
 </body>

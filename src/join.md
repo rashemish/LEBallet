@@ -1,40 +1,36 @@
 ---
 layout: layouts/base.njk
-title: Home | LEBallet
-permalink: /join/
+title: Join | LEBallet
+permalink: "join.html"
 ---
+<section class="rda-section">
+  <h2>REGIONAL DANCE AMERICA</h2>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to LEBallet</h1>
-        <p>Experience the grace and power of dance.</p>
-    </div>
-</section>
+  <div class="rda-grid">
 
-<section class="grid-section">
-    <h2>Our Classes</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Beginner Ballet</h3>
-            <p>Perfect for those starting their journey.</p>
-        </div>
-        <div class="card">
-            <h3>Advanced Pointe</h3>
-            <p>Refining technique and strength.</p>
-        </div>
-    </div>
-</section>
+    <a href="{{ '/participation/' | url }}" class="rda-card">
+      <div class="rda-img">
+        <img src="{{ '/assets/rda1.jpg' | url }}" />
+      </div>
+      <h3>PARTICIPATION</h3>
+      <p>Lorem Aliquam lobortis feugiat vestibulum.</p>
+    </a>
 
-<section class="grid-section">
-    <h2>Upcoming Performances</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Spring Gala</h3>
-            <p>March 2026</p>
-        </div>
-        <div class="card">
-            <h3>Winter Nutcracker</h3>
-            <p>December 2026</p>
-        </div>
-    </div>
+    <a href="{{ '/eligibility/' | url }}" class="rda-card">
+      <div class="rda-img">
+        <img src="{{ '/assets/rda2.jpg' | url }}" />
+      </div>
+      <h3>ELIGIBILITY</h3>
+      <p>Lorem Aliquam lobortis feugiat vestibulum.</p>
+    </a>
+
+    <a href="{{ '/commitment/' | url }}" class="rda-card">
+      <div class="rda-img">
+        <img src="{{ '/assets/rda3.jpg' | url }}" />
+      </div>
+      <h3>COMMITMENT</h3>
+      <p>Lorem Aliquam lobortis feugiat vestibulum.</p>
+    </a>
+
+  </div>
 </section>
