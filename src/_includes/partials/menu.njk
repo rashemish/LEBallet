@@ -1,0 +1,12 @@
+<nav id="drawerMenu" class="drawer">
+    <button class="close-btn" onclick="toggleMenu()">✕</button>
+
+    <a href="/" class="{% if page.url == '/' %}active{% endif %}">HOME</a>
+    <a href="about/" class="{% if page.url == '/about/' %}active{% endif %}">ABOUT US</a>
+    <a href="performances/" class="{% if page.url == '/performances/' %}active{% endif %}">EVENTS</a>
+    <a href="classes/" class="{% if page.url == '/classes/' %}active{% endif %}">JOIN THE LEBC</a>
+    <a href="support/" class="{% if page.url == '/support/' %}active{% endif %}">SUPPORT</a>
+    <a href="contact/" class="{% if page.url == '/contact/' %}active{% endif %}">CONTACT</a>
+</nav>
+
+<div id="drawerOverlay" class="drawer-overlay" onclick="toggleMenu()"></div>

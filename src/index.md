@@ -1,47 +1,48 @@
 ---
-layout: base.njk
-title: Lake Erie Ballet Company
+layout: layouts/base.njk
+title: Home | LEBallet
 ---
 
-<section class="home-hero-image">
-  <div class="hero-overlay">
-    <div class="hero-content-wrap">
-      <h1>Lake Erie Ballet Company</h1>
-      <p>
-        Performance, education, and community engagement through ballet.
-      </p>
-      <a href="/mission/" class="main-button">Our Mission</a>
-    </div>
+<section class="hero">
+  <img src="/assets/landing_page.png" alt="Lake Erie Ballet Company hero image">
+
+  <div class="hero-content fade-in">
+    <h1>Lake Erie Ballet Company</h1>
+    <p>
+      Welcome to the Lake Erie Ballet Company website. LEB is committed
+      to artistry, innovation, and community.
+    </p>
+    <a href="/mission/" class="main-button">Our Mission</a>
   </div>
 </section>
 
 <section class="home-cards-section">
   <div class="home-card">
-    <img src="/img/mission1.jpg" alt="Performance placeholder image">
+    <img src="/assets/mission1.jpg" alt="Performance">
     <div class="home-card-content">
       <h2>Performance</h2>
       <p>
-        Presenting ballet experiences for Erie audiences through inspiring productions and artistic storytelling.
+        Presenting ballet experiences for Erie audiences through inspiring productions.
       </p>
     </div>
   </div>
 
   <div class="home-card">
-    <img src="/img/mission2.jpg" alt="Education placeholder image">
+    <img src="/assets/mission2.jpg" alt="Education">
     <div class="home-card-content">
       <h2>Education</h2>
       <p>
-        Supporting artistic growth through dance learning opportunities that build technique, confidence, and creativity.
+        Supporting artistic growth through dance learning opportunities.
       </p>
     </div>
   </div>
 
   <div class="home-card">
-    <img src="/img/mission3.jpg" alt="Community placeholder image">
+    <img src="/assets/mission3.jpg" alt="Community">
     <div class="home-card-content">
       <h2>Community</h2>
       <p>
-        Building connection through outreach and engagement that strengthens relationships with dancers, families, and audiences.
+        Building connection through outreach and engagement.
       </p>
     </div>
   </div>
