@@ -520,7 +520,7 @@ body {
 }
 
 .support-hero .hero-content h1 {
-    margin-top: 350px;
+    margin-top: 30vh;
     font-size: 110px;
     color: #B9DAE1;
     font-family: "Orelega One", serif;
@@ -606,26 +606,24 @@ body {
     padding: 10px 0 25px;
 }
 
-.wholeB {
+/*gallery styles*/
+.column-gallery {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
     background: #B9DAE1;
 }
-
 .container {
     display: block;
     position: relative;
     color: white;
     z-index: 1;
 }
-
 .title {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-
 h1.galHead {
     font-size: 100px;
     color: #f8eeed;
@@ -633,7 +631,6 @@ h1.galHead {
     font-weight: 400;
     font-style: normal;
 }
-
 .galPara {
     font-size: 100px;
     color: #f8eeed;
@@ -641,7 +638,6 @@ h1.galHead {
     font-weight: 400;
     font-style: normal;
 }
-
 .centered {
     position: absolute;
     top: 50%;
@@ -649,39 +645,32 @@ h1.galHead {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
 .box {
     display: block;
-    margin: 10px 100px;
+    margin: 20px 100px;
 }
-
 .responsive {
     padding: 0 6px;
     float: left;
     width: 25%;
 }
-
 .responsiveLong {
     padding: 0 6px;
     float: left;
     width: 50%;
 }
-
 div.gallery {
     margin-top: 5px;
 }
-
 div.gallery img {
     width: 100%;
     height: 100%;
 }
-
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
-
 .modal {
     display: none;
     position: fixed;
@@ -695,7 +684,6 @@ div.gallery img {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
 }
-
 .modal-content {
     margin: auto;
     display: block;
@@ -706,7 +694,6 @@ div.gallery img {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
-
 .close {
     position: fixed;
     top: 15px;
@@ -716,14 +703,12 @@ div.gallery img {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
-
 .plus {
     position: fixed;
     bottom: 15px;
@@ -733,14 +718,12 @@ div.gallery img {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .plus:hover,
 .plus:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
-
 .minus {
     position: fixed;
     bottom: 15px;
@@ -750,23 +733,36 @@ div.gallery img {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .minus:hover,
 .minus:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
-
-.wholeP {
+/*Staff Styles*/
+.column-staff {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
     background: #7f5a83;
 }
 
+.staff-hero {
+    position: relative;
+    z-index: 1;
+}
+
+.staff-hero .hero-content h1 {
+    margin-top: 5vh;
+    font-size: 110px;
+    color: #7f5a83;
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .blank {
-    height: 75vh;
+    height: 35vh;
     position: relative;
     overflow: hidden;
 }
@@ -779,54 +775,103 @@ div.gallery img {
     z-index: 1;
 }
 
-.container-SBS {
+.container-begin {
     display: inline-flex;
     justify-content: center;
+    align-content: flex-start;
+    padding: 20px 0 0 0;
+}
+
+.container-mid {
+    display: inline-flex;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 0 ;
+}
+
+.container-end {
+    display: inline-flex;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 0 0 20px 0;
+}
+
+.container-single {
+    display: inline-flex;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 20px 0;
 }
 
 .card-info-left {
-    background-color: #b300b3;
     width: 50%;
     height: auto;
     margin: 10px auto 10px 15px;
-    border-radius: 20px;
-}
-
-.card-info-right {
-    background-color: #b300b3;
-    width: 50%;
-    height: auto;
-    margin: 10px 15px 10px auto;
-    border-radius: 20px;
 }
 
 .card-img-left {
-    width: 35%;
-    height: 50%;
-    margin: 10px auto 10px 15px;
-    border-radius: 20px;
+    display: flex;
+    width: 23%;
+    height: auto;
+    margin: 0 auto 10px 35vh;
+    justify-content: center;
 }
 
-p.Wtext {
-    text-align: left;
-    font: 18px Georgia, Sans-Serif;
-    color: #FFF;
-    padding: 10px 20px;
-    margin: 10px 0 19.920px 10px;
-    text-indent: 50px;
+.card-info-right {
+    width: 38%;
+    height: auto;
+    margin: 0 35vh 0 auto;
+}
+.card-info-center {
+    width: 61%;
+    height: auto;
+    margin: 0 auto 0 33vh;
+}
+.card-info-left,
+.card-info-right p {
+    margin-block-end: 0;
 }
 
-h2.title {
-    text-align: left;
-    font: 25px Georgia, Sans-Serif;
-    color: #FFF;
-    padding: 15px 20px;
-    margin: 10px 0 19.920px 10px;
+.img-sizing {
+    width: 100%;
+    height: auto;
+    margin: 10px 15px;
+    object-fit: contain;
 }
 
-h1.sTitle {
-    font: 50px Georgia, Sans-Serif;
+h1.text-title {
+    font-size: 70px;
+    color: var(--soft-white);
+    line-height: 1.5;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
     text-align: center;
+}
+
+h1.text-heading {
+    font-size: 70px;
+    color: var(--soft-white);
+    line-height: 1.5;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+}
+
+h2.text-subheading {
+    font-size: 50px;
+    color: var(--soft-white);
+    line-height: 1.5;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+}
+
+p.text-para {
+    font-size: 17px;
+    color: var(--soft-white);
+    line-height: 1.5;
+    padding: 10px 20px;
+    font-family: "Instrument sans", sans-serif;
+    text-align: left;
+    text-indent: 50px;
 }
 
 div.list {
@@ -853,12 +898,12 @@ img.list-item {
 }
 
 .name {
-    font: 15px Georgia, Sans-Serif;
+    font: 18px Georgia, Sans-Serif;
     padding: 3px;
 }
 
 .role {
-    font: 15px Georgia, Sans-Serif;
+    font: 16px Georgia, Sans-Serif;
     padding: 3px;
 }
 
@@ -867,6 +912,7 @@ a.staff {
     color: #fffafa;
 }
 
+/*footer styles*/
 .footer {
     background: var(--dusty-rose);
     padding: 60px 40px 30px;
