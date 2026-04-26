@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | LEBallet</title>
-    <base href="/LEBallet/">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -60,45 +58,46 @@
 </div>
 
 <main>
-  <div class="wholeB">
-<div class="container">
-<img src="/assets/all-blur.jpg" class="title"/>
-<div class="centered">
-    <h1 class="galHead">Erie Ballet Company</h1>
-    <p class="galPara">Gallery</p>
-</div>
-</div>
-<div class="box">
-<div class="responsive">
-  <div class="gallery">
-      <img src="/assets/jump1.webp" class="target" alt="Forest">
-  </div>
-</div>
-<div class="responsive">
-  <div class="gallery">
-      <img src="/assets/jump2.webp" class="target" alt="Forest">
-  </div>
-</div>
-<div class="responsive">
-  <div class="gallery">
-      <img src="/assets/jump3.webp" class="target" alt="Forest">
-  </div>
-</div>
-<div class="responsive">
-  <div class="gallery">
-      <img src="/assets/diavolo.webp" class="target" alt="Forest">
-  </div>
-</div>
-<div class="responsiveLong">
-    <div class="gallery">
-        <img src="/assets/headshot1.webp" class="target" alt="Forest"/>
+  <div class="column-gallery">
+    <div class="container">
+        <img src="/assets/all-blur.jpg" class="title"/>
+        <div class="centered">
+            <h1 class="galHead">Lake Erie Ballet Company</h1>
+            <p class="galPara">Gallery</p>
+        </div>
     </div>
-</div>
-<div class="responsiveLong">
-    <div class="gallery">
-        <img src="/assets/prayer.webp" class="target" alt="Forest"/>
+    <div class="box">
+        <div class="responsive">
+            <div class="gallery">
+                <img src="/assets/jump1.webp" class="target" alt="Forest">
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="/assets/jump2.webp" class="target" alt="Forest">
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="/assets/jump3.webp" class="target" alt="Forest">
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="gallery">
+                <img src="/assets/diavolo.webp" class="target" alt="Forest">
+            </div>
+        </div>
+        <div class="responsiveLong">
+            <div class="gallery">
+                <img src="/assets/headshot1.webp" class="target" alt="Forest"/>
+            </div>
+        </div>
+        <div class="responsiveLong">
+            <div class="gallery">
+                <img src="/assets/prayer.webp" class="target" alt="Forest"/>
+            </div>
+        </div>
     </div>
-</div>
 </div>
 <div id="myModal" class="modal">
   <span class="close">×</span>
@@ -140,7 +139,6 @@ for (i = 0; i < images.length; i++) {
   }
 }
 </script>
-</div>
 
 </main>
 
@@ -177,34 +175,54 @@ for (i = 0; i < images.length; i++) {
 </footer>
 
 <script>
-        function toggleMenu() {
-        document.getElementById("drawerMenu").classList.toggle("open");
-        document.getElementById("drawerOverlay").classList.toggle("show");
-    }
+function toggleMenu() {
+  document.getElementById("drawerMenu")?.classList.toggle("open");
+  document.getElementById("drawerOverlay")?.classList.toggle("show");
+}
 
-  function openSearch() {
-    document.getElementById("searchOverlay").style.display = "flex";
+function openSearch() {
+  const searchOverlay = document.getElementById("searchOverlay");
+  if (searchOverlay) {
+    searchOverlay.style.display = "flex";
   }
+}
 
-  function closeSearch() {
-    document.getElementById("searchOverlay").style.display = "none";
+function closeSearch() {
+  const searchOverlay = document.getElementById("searchOverlay");
+  if (searchOverlay) {
+    searchOverlay.style.display = "none";
   }
+}
 
-  document.querySelectorAll(".item button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling;
-      content.style.display =
-        content.style.display === "block" ? "none" : "block";
-    });
+document.querySelectorAll(".support-item button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
   });
+});
 
-        document.querySelectorAll(".support-item button").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const content = btn.nextElementSibling;
-                content.style.display =
-                    content.style.display === "block" ? "none" : "block";
-            });
-        });
+const missionImages = [
+  "/assets/mission1.jpg",
+  "/assets/mission2.jpg",
+  "/assets/mission3.jpg"
+];
+
+const missionImg = document.getElementById("mission-slideshow");
+
+if (missionImg) {
+  let current = 0;
+
+  setInterval(() => {
+    missionImg.style.opacity = "0";
+
+    setTimeout(() => {
+      current = (current + 1) % missionImages.length;
+      missionImg.src = missionImages[current];
+      missionImg.style.opacity = "1";
+    }, 500);
+  }, 4200);
+}
 </script>
 
 </body>
