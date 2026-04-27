@@ -12,28 +12,28 @@ permalink: "staff.html"
     <h1 class="text-title">Get to Know Us!</h1>
     <div class="list">
         <div class="list-item">
-            <a href="/AD-CM" class="staff">
+            <a href="AD-CM.html" class="staff">
                 <img src="{{ 'assets/AD-CM.webp' | url }}" class="list-item" alt="Christina Maria"/>
                 <div class="name"><b>Christina Maria</b></div>
                 <div class="role">Artistic Director</div>
             </a>
         </div>
         <div class="list-item">
-            <a href="/ED-EY" class="staff">
+            <a href="ED-EY.html" class="staff">
                 <img src="{{ 'assets/ED-EY.webp' | url }}" class="list-item" alt="Elizabeth"/>
                 <div class="name"><b>Elizabeth Young</b></div>
                 <div class="role">Executive Director</div>
             </a>
         </div>
         <div class="list-item">
-            <a href="/MD-EB" class="staff">
+            <a href="MD-EB.html" class="staff">
                 <img src="{{ 'assets/MD-EB.webp' | url }}" class="list-item" alt="Erin Bizzarro"/>
                 <div class="name"><b>Erin Bizzarro</b></div>
                 <div class="role">Marketing Director</div>
             </a>
         </div>
         <div class="list-item">
-            <a href="/MD-JM" class="staff">
+            <a href="MD-JM.html" class="staff">
                 <img src="{{ 'assets/MD-JM.webp' | url }}" class="list-item" alt="Erin Bizzarro"/>
                 <div class="name"><b>JONATHAN MOSER</b></div>
                 <div class="role">Musical Director and Conductor</div>
