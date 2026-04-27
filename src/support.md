@@ -18,7 +18,7 @@ permalink: "support.html"
       ullamcorper non ligula.
     </p>
     <div class="support-image">
-      <img src="/assets/support_page_2.png" alt="Ballerina">
+      <img src="{{ '/assets/support_page_2.png' | url }}" alt="Ballerina">
     </div>
   </section>
  <section class="support-ways">
