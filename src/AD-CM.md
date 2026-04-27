@@ -11,7 +11,7 @@ permalink: "AD-CM.html"
     </section>
     <div class="container-begin">
         <div class="card-img-left">
-            <img src="{{ '/assets/AD-CM.webp' | url }}" class="img-sizing" alt="Christina Maria - Artistic Director"/>
+            <img src="{{ 'assets/AD-CM.webp' | url }}" class="img-sizing" alt="Christina Maria - Artistic Director"/>
         </div>
         <div class="card-info-right">
             <h1 class="text-heading">Christina Maria</h1>

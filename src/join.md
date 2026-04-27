@@ -8,25 +8,25 @@ permalink: "join.html"
 
   <div class="rda-grid">
 
-    <a href="{{ '/participation/' | url }}" class="rda-card">
+    <a href="{{ 'participation/' | url }}" class="rda-card">
       <div class="rda-img">
-        <img src="{{ '/assets/rda1.jpg' | url }}" />
+        <img src="{{ 'assets/rda1.jpg' | url }}" />
       </div>
       <h3>PARTICIPATION</h3>
       <p>Lorem Aliquam lobortis feugiat vestibulum.</p>
     </a>
 
-    <a href="{{ '/eligibility/' | url }}" class="rda-card">
+    <a href="{{ 'eligibility/' | url }}" class="rda-card">
       <div class="rda-img">
-        <img src="{{ '/assets/rda2.jpg' | url }}" />
+        <img src="{{ 'assets/rda2.jpg' | url }}" />
       </div>
       <h3>ELIGIBILITY</h3>
       <p>Lorem Aliquam lobortis feugiat vestibulum.</p>
     </a>
 
-    <a href="{{ '/commitment/' | url }}" class="rda-card">
+    <a href="{{ 'commitment/' | url }}" class="rda-card">
       <div class="rda-img">
-        <img src="{{ '/assets/rda3.jpg' | url }}" />
+        <img src="{{ 'assets/rda3.jpg' | url }}" />
       </div>
       <h3>COMMITMENT</h3>
       <p>Lorem Aliquam lobortis feugiat vestibulum.</p>
