@@ -32,5 +32,12 @@ permalink: "staff.html"
                 <div class="role">Marketing Director</div>
             </a>
         </div>
+        <div class="list-item">
+            <a href="/MD-JM" class="staff">
+                <img src="{{ 'assets/MD-JM.webp' | url }}" class="list-item" alt="Erin Bizzarro"/>
+                <div class="name"><b>JONATHAN MOSER</b></div>
+                <div class="role">Musical Director and Conductor</div>
+            </a>
+        </div>
     </div>
 </div>
