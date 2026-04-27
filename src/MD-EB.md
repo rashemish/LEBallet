@@ -11,7 +11,7 @@ permalink: "MD-EB.html"
     </section>
     <div class="container-single">
         <div class="card-img-left">
-            <img src="{{ '/assets/MD-EB.webp' | url }}" class="img-sizing" alt="Erin Bizzaro - Marketing Director"/>
+            <img src="{{ 'assets/MD-EB.webp' | url }}" class="img-sizing" alt="Erin Bizzaro - Marketing Director"/>
         </div>
         <div class="card-info-right">
             <h1 class="text-heading">Erin Bizzaro</h1>

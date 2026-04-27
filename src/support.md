@@ -5,7 +5,7 @@ permalink: "support.html"
 ---
 <section class="support-page">
  <section class="hero support-hero">
-    <img src="/assets/support_page.png" alt="Erie's Nutcracker Performance">
+    <img src="assets/support_page.png" alt="Erie's Nutcracker Performance">
     <div class="hero-content fade-in">
       <h1>SUPPORT</h1>
     </div>
