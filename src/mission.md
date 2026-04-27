@@ -1,13 +1,12 @@
 ---
 layout: layouts/base.njk
 title: Mission | Lake Erie Ballet Company
-permalink: mission/
+permalink: "mission.html"
 ---
 
 <section class="mission-page">
   <section class="hero mission-hero">
     <img src="assets/mission1.jpg" alt="Lake Erie Ballet Company dancers" id="mission-slideshow">
-
     <div class="hero-content fade-in">
       <p class="mission-hero-kicker">Lake Erie Ballet Company</p>
       <h1>MISSION</h1>

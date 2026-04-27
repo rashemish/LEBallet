@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/rashemish/LEBallet/issues"
   },
-  "homepage": "https://github.com/rashemish/LEBallet#readme",
+  "homepage": "https://github.com/rashemish/LEBallet/index.html#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
