@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Mission | Lake Erie Ballet Company
-permalink: /mission/
+permalink: mission/
 ---
 
 <section class="mission-page">
