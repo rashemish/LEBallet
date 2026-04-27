@@ -13,7 +13,7 @@ permalink: "index.html"
       Welcome to the Lake Erie Ballet Company website. LEB is committed
       to artistry, innovation, and community.
     </p>
-    <a href="mission/" class="main-button">Our Mission</a>
+    <a href="mission.html" class="main-button">Our Mission</a>
   </div>
 </section>
 
