@@ -1,17 +1,22 @@
 ---
 layout: layouts/base.njk
-title: Commitment
+title: Commitment | L.E. Ballet
 permalink: "commitment.html"
 ---
 
-# COMMITMENT
+<section class="inner-page">
 
-## SUB HEADING
-Lorem ipsum...
+  <section class="hero rda-hero">
+    <img src="/assets/rda-hero.jpg" alt="Commitment">
 
-## SUB HEADING
-Lorem ipsum...
+    <div class="hero-content fade-in">
+      <h1>COMMITMENT</h1>
+    </div>
+  </section>
 
-## SUB HEADING
-- Item 1
-- Item 2
+  <section class="inner-content">
+    <h3>SUB HEADING</h3>
+    <p>Add commitment content here.</p>
+  </section>
+
+</section>

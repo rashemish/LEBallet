@@ -1,17 +1,32 @@
 ---
 layout: layouts/base.njk
-title: Participation
+title: Participation | L.E. Ballet
 permalink: "participation.html"
 ---
 
-# PARTICIPATION
+<section class="inner-page">
 
-## SUB HEADING
-Lorem ipsum...
+  <section class="hero rda-hero">
+    <img src="/assets/rda-hero.jpg" alt="Participation">
 
-## SUB HEADING
-Lorem ipsum...
+    <div class="hero-content fade-in">
+      <h1>PARTICIPATION</h1>
+    </div>
+  </section>
 
-## SUB HEADING
-- Item 1
-- Item 2
+  <section class="inner-content">
+    <h3>SUB HEADING</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>SUB HEADING</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <h3>SUB HEADING</h3>
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Lorem ipsum dolor sit amet</li>
+    </ul>
+  </section>
+
+</section>

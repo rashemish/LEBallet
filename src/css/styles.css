@@ -1,3 +1,10 @@
+/*body*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --deep-brown: #160707;
     --soft-white: #F8EEED;
@@ -7,18 +14,11 @@
     --soft-yellow: #F9E784;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: serif;
-}
-
 body {
     background: black;
-    color: white;
 }
 
+/*navigation bar*/
 .nav {
     position: absolute;
     top: 0;
@@ -46,6 +46,127 @@ body {
     z-index: -1;
 }
 
+/*menu drawer*/
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: var(--dusty-rose);
+    display: flex;
+    flex-direction: column;
+    padding: 200px 50px;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 2000;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer a {
+    color: #2E282A;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 20px 0;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.drawer a.active {
+    color: var(--soft-white);
+}
+
+.close-btn {
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    background: none;
+    border: none;
+    color: #2E282A;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}
+
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1500;
+}
+
+.drawer-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*search bar*/
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    text-align: center;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    font-size: 18px;
+}
+
+.search-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+.dropdown a.active {
+    color: #f3c6d3;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/*home button*/
 .logo img {
     height: 77px;
     width: auto;
@@ -104,12 +225,12 @@ body {
 .hero-content {
     position: absolute;
     z-index: 2;
-    top: 40%;
+    top: 35%;
     left: 8%;
     max-width: 800px;
 }
 
-.hero-content h1 {
+.home-hero .hero-content h1 {
     font-size: 100px;
     color: var(--dusty-rose);
     font-family: "Aguafina Script", cursive;
@@ -118,7 +239,7 @@ body {
 }
 
 .hero-content p {
-    font-size: 24.5px;
+    font-size: 20px;
     color: var(--soft-white);
     max-width: 570px;
     font-family: "Instrument Serif", serif;
@@ -391,124 +512,116 @@ body {
     color: #2E282A;
 }
 
-.drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100vh;
-    background: var(--dusty-rose);
-    display: flex;
-    flex-direction: column;
-    padding: 200px 50px;
-    transform: translateX(100%);
-    transition: transform 0.35s ease;
-    z-index: 2000;
+/*regional dance america page*/
+.rda-page {
+    background: #f4efec;
+    color: #1c2b33;
 }
 
-.drawer.open {
-    transform: translateX(0);
-}
-
-.drawer a {
-    color: #2E282A;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 20px 0;
-    font-family: "Instrument Serif", serif;
+.rda-hero .hero-content h1 {
+    font-size: 70px;
+    font-family: "Orelega One", serif;
     font-weight: 400;
-    font-style: normal;
+    color: #f4efec;
 }
 
-.drawer a.active {
-    color: var(--soft-white);
+.rda-intro {
+    padding: 80px 10%;
 }
 
-.close-btn {
-    position: absolute;
-    top: 55px;
-    right: 55px;
-    background: none;
-    border: none;
-    color: #2E282A;
-    font-size: 24px;
-    cursor: pointer;
+.rda-intro h2 {
+    font-size: 30px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: right;
 }
 
-.close-btn:hover {
-    transform: scale(1.1);
+.rda-intro h3 {
+    font-size: 30px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 40px 0 20px;
+    text-align: left;
 }
 
-.drawer-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1500;
+.rda-page .rda-intro p {
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 0 0;
+    text-align: left;
 }
 
-.drawer-overlay.show {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.search-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-box {
-    text-align: center;
-}
-
-.search-box input {
-    padding: 10px;
-    width: 300px;
-    font-size: 18px;
-}
-
-.search-box button {
-    margin-top: 10px;
-    padding: 10px 20px;
-}
-
-.dropdown a.active {
-    color: #f3c6d3;
-    font-weight: bold;
-}
-
-.dropdown {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: black;
+.rda-intro .rda-grid {
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: all 0.3s ease;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
-.dropdown.show {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+.rda-intro .rda-card {
+    width: 280px;
+    text-decoration: none;
+    color: #1c2b33;
+    transition: transform 0.3s ease;
 }
 
+.rda-intro .rda-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.rda-intro .rda-card h4 {
+    margin-top: 14px;
+    font-size: 14px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.rda-intro .rda-card:hover {
+    transform: translateY(-6px);
+}
+
+/* INNER PAGES */
+
+.inner-page {
+    background: var(--soft-white);
+    color: #1f2a30;
+}
+
+.inner-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 40px;
+}
+
+.inner-content h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-family: "Lexend", sans-serif;
+}
+
+.inner-content p,
+.inner-content li {
+    line-height: 1.8;
+    font-family: "Lexend", sans-serif;
+}
+
+.inner-content ul {
+    padding-left: 20px;
+}
+
+/*support*/
 .support-page {
     background: #B9DAE1;
     color: #1f2a30;
@@ -520,7 +633,7 @@ body {
 }
 
 .support-hero .hero-content h1 {
-    margin-top: 30vh;
+    margin-top: 37vh;
     font-size: 110px;
     color: #B9DAE1;
     font-family: "Orelega One", serif;
@@ -531,7 +644,7 @@ body {
 .support-intro {
     position: relative;
     margin-top: -100px;
-    padding: 160px 20px 80px;
+    padding: 110px 20px 30px;
     background: #B9DAE1;
     text-align: center;
     z-index: 2;
@@ -546,10 +659,11 @@ body {
 
 .support-intro p {
     max-width: 700px;
-    margin: 0 auto 50px;
+    margin: 0 auto 70px;
     line-height: 1.6;
     font-family: "Lexend", sans-serif;
     font-weight: 400;
+    font-size: 16px
 }
 
 .support-image {
@@ -564,7 +678,7 @@ body {
 
 .support-ways {
     text-align: center;
-    padding: 80px 40px;
+    padding: 50px 50px;
 }
 
 .support-ways h3 {
@@ -575,12 +689,14 @@ body {
 }
 
 .support-accordion {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
+    border-top: 2px solid #1f2a30;
 }
 
 .support-item {
-    border-top: 2px solid #1f2a30;
+    border-top: none;
+    border-bottom: 2px solid #1f2a30;
 }
 
 .support-item:last-child {
@@ -603,7 +719,27 @@ body {
 
 .support-item .content {
     display: none;
-    padding: 10px 0 25px;
+    padding: 10px 0 30px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+}
+
+.support-item .content p {
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    color: #1f2a30;
+    padding: 0 10px;
+}
+
+.support-item img {
+    width: 70%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 15px auto 10px;
 }
 
 /*gallery styles*/
@@ -1068,21 +1204,3 @@ a.staff {
         font-size: 18px;
         line-height: 1.72;
     }
-
-    .rda-grid {
-        justify-content: center;
-    }
-
-    .rda-card {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .inner-page h1 {
-        text-align: left;
-    }
-
-    .footer-container {
-        flex-direction: column;
-    }
-}
