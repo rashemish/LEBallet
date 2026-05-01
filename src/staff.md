@@ -26,13 +26,6 @@ permalink: "staff.html"
             </a>
         </div>
         <div class="list-item">
-            <a href="MD-EB.html" class="staff">
-                <img src="{{ 'assets/MD-EB.webp' | url }}" class="list-item" alt="Erin Bizzarro"/>
-                <div class="name"><b>Erin Bizzarro</b></div>
-                <div class="role">Marketing Director</div>
-            </a>
-        </div>
-        <div class="list-item">
             <a href="MD-JM.html" class="staff">
                 <img src="{{ 'assets/MD-JM.webp' | url }}" class="list-item" alt="Erin Bizzarro"/>
                 <div class="name"><b>JONATHAN MOSER</b></div>

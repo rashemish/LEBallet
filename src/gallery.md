@@ -11,35 +11,43 @@ permalink: "gallery.html"
             <p class="galPara">Gallery</p>
         </div>
     </div>
+    <div class="info-search-box"> 
+        <div class="card-info-center"> 
+            <button type="button" class="gal">All</button> 
+            <button type="button" class="gal">Nutcracker</button> 
+            <button type="button" class="gal">Art of Dance</button> 
+            <button type="button" class="gal">Spring Gala</button> 
+        </div> 
+    </div> 
     <div class="box">
         <div class="responsive">
             <div class="gallery">
-                <img src="{{ 'assets/jump1.webp' | url }}" class="target" alt="Forest">
+                <img src="{{ 'assets/jump1.webp' | url }}" class="target nut" alt="Forest">
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <img src="{{ 'assets/jump2.webp' | url }}" class="target" alt="Forest">
+                <img src="{{ 'assets/jump2.webp' | url }}" class="target nut" alt="Forest">
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <img src="{{ 'assets/jump3.webp' | url }}" class="target" alt="Forest">
+                <img src="{{ 'assets/jump3.webp' | url }}" class="target gala" alt="Forest">
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <img src="{{ 'assets/diavolo.webp' | url }}" class="target" alt="Forest">
+                <img src="{{ 'assets/diavolo.webp' | url }}" class="target gala" alt="Forest">
             </div>
         </div>
         <div class="responsiveLong">
             <div class="gallery">
-                <img src="{{ 'assets/headshot1.webp' | url }}" class="target" alt="Forest"/>
+                <img src="{{ 'assets/headshot1.webp' | url }}" class="target spring" alt="Forest"/>
             </div>
         </div>
         <div class="responsiveLong">
             <div class="gallery">
-                <img src="{{ 'assets/prayer.webp' | url }}" class="target" alt="Forest"/>
+                <img src="{{ 'assets/prayer.webp' | url }}" class="target spring" alt="Forest"/>
             </div>
         </div>
     </div>
@@ -53,15 +61,12 @@ permalink: "gallery.html"
 
 <script>
 var modal = document.getElementById('myModal');
-
 var close = document.getElementsByClassName("close")[0];
-
 var plus = document.getElementsByClassName("plus")[0];
-
 var minus = document.getElementsByClassName("minus")[0];
 
 close.onclick = function() { 
-  modal.style.display = "none";
+    modal.style.display = "none";
 };
 plus.onclick = function() {
 if (modalImg.currentCSSZoom < 2){
