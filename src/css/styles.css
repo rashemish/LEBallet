@@ -310,19 +310,19 @@ body {
 .mission-panel-one {
     background-image:
             linear-gradient(rgba(22, 7, 7, 0.28), rgba(22, 7, 7, 0.28)),
-            url("/assets/mission2.jpg");
+            url("../assets/mission2.jpg");
 }
 
 .mission-panel-two {
     background-image:
             linear-gradient(rgba(127, 90, 131, 0.35), rgba(127, 90, 131, 0.35)),
-            url("/assets/mission3.jpg");
+            url("../assets/mission3.jpg");
 }
 
 .mission-panel-three {
     background-image:
             linear-gradient(rgba(157, 199, 200, 0.20), rgba(157, 199, 200, 0.20)),
-            url("/assets/mission1.jpg");
+            url("../assets/mission1.jpg");
 }
 
 .mission-overlay-card {

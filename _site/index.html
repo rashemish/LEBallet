@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | LEBallet</title>
-    <base href="/LEBallet/">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -61,13 +59,43 @@
 
 <main>
   <section class="hero">
- <img src="/assets/landing_page.png" alt="Ballet Hero">
+  <img src="/assets/landing_page.png" alt="Lake Erie Ballet Company hero image">
   <div class="hero-content fade-in">
     <h1>Lake Erie Ballet Company</h1>
     <p>
       Welcome to the Lake Erie Ballet Company website. LEB is committed
       to artistry, innovation, and community.
     </p>
+    <a href="/mission/" class="main-button">Our Mission</a>
+  </div>
+</section>
+<section class="home-cards-section">
+  <div class="home-card">
+    <img src="/assets/mission1.jpg" alt="Performance">
+    <div class="home-card-content">
+      <h2>Performance</h2>
+      <p>
+        Presenting ballet experiences for Erie audiences through inspiring productions.
+      </p>
+    </div>
+  </div>
+  <div class="home-card">
+    <img src="/assets/mission2.jpg" alt="Education">
+    <div class="home-card-content">
+      <h2>Education</h2>
+      <p>
+        Supporting artistic growth through dance learning opportunities.
+      </p>
+    </div>
+  </div>
+  <div class="home-card">
+    <img src="/assets/mission3.jpg" alt="Community">
+    <div class="home-card-content">
+      <h2>Community</h2>
+      <p>
+        Building connection through outreach and engagement.
+      </p>
+    </div>
   </div>
 </section>
 </main>
@@ -105,34 +133,54 @@
 </footer>
 
 <script>
-        function toggleMenu() {
-        document.getElementById("drawerMenu").classList.toggle("open");
-        document.getElementById("drawerOverlay").classList.toggle("show");
-    }
+function toggleMenu() {
+  document.getElementById("drawerMenu")?.classList.toggle("open");
+  document.getElementById("drawerOverlay")?.classList.toggle("show");
+}
 
-  function openSearch() {
-    document.getElementById("searchOverlay").style.display = "flex";
+function openSearch() {
+  const searchOverlay = document.getElementById("searchOverlay");
+  if (searchOverlay) {
+    searchOverlay.style.display = "flex";
   }
+}
 
-  function closeSearch() {
-    document.getElementById("searchOverlay").style.display = "none";
+function closeSearch() {
+  const searchOverlay = document.getElementById("searchOverlay");
+  if (searchOverlay) {
+    searchOverlay.style.display = "none";
   }
+}
 
-  document.querySelectorAll(".item button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling;
-      content.style.display =
-        content.style.display === "block" ? "none" : "block";
-    });
+document.querySelectorAll(".support-item button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    content.style.display =
+      content.style.display === "block" ? "none" : "block";
   });
+});
 
-        document.querySelectorAll(".support-item button").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const content = btn.nextElementSibling;
-                content.style.display =
-                    content.style.display === "block" ? "none" : "block";
-            });
-        });
+const missionImages = [
+  "/assets/mission1.jpg",
+  "/assets/mission2.jpg",
+  "/assets/mission3.jpg"
+];
+
+const missionImg = document.getElementById("mission-slideshow");
+
+if (missionImg) {
+  let current = 0;
+
+  setInterval(() => {
+    missionImg.style.opacity = "0";
+
+    setTimeout(() => {
+      current = (current + 1) % missionImages.length;
+      missionImg.src = missionImages[current];
+      missionImg.style.opacity = "1";
+    }, 500);
+  }, 4200);
+}
 </script>
 
 </body>
