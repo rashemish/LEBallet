@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 10;
 }
 .nav::before {
     content: "";
@@ -648,6 +648,7 @@ body {
     display: flex;
     flex-direction: column;
     background: #B9DAE1;
+    box-sizing: border-box;
 }
 .container {
     display: block;
@@ -691,15 +692,34 @@ h1.galHead {
 .card-info-center {
     display: flex;
     margin: 10px auto;
-    padding: 15px;
     justify-content: center;
     align-content: center;
 }
-button.gal{
-    padding: 10px 6px;
-    margin: 5px;
+.gall-button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 14px 20px;
     background: #B9DAE1;
-    border: none;
+    color: #2E282A;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Instrument Serif", serif;
+    transition: all 0.3s ease;
+}
+.hero-content-gallery {
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 8%;
+    max-width: 800px;
+}
+.staff-hero .hero-content-gallery h1 {
+    margin-top: 5vh;
+    font-size: 110px;
+    color: #B9DAE1;
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .box {
     display: block;
