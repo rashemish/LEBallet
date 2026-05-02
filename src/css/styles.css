@@ -651,7 +651,7 @@ body {
     box-sizing: border-box;
 }
 .container {
-    display: block;
+    display: flex;
     position: relative;
     color: white;
     z-index: 1;
@@ -692,6 +692,7 @@ h1.galHead {
 .card-info-center {
     display: flex;
     margin: 10px auto;
+    padding: 10px;
     justify-content: center;
     align-content: center;
 }
