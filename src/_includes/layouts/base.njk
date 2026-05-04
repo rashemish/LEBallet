@@ -1,77 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
 
-  <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Instrument+Serif:ital@0;1&family=Lexend:wght@100..900&family=Orelega+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 {% include "partials/header.njk" %}
 {% include "partials/menu.njk" %}
-{% include "partials/search.njk" %}
+{% include "partials/search-overlay.njk" %}
 
 <main>
-  {{ content | safe }}
+    {{ content | safe }}
 </main>
 
 {% include "partials/footer.njk" %}
 
+<!-- Fuse.js -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
 <script>
-function toggleMenu() {
-  document.getElementById("drawerMenu")?.classList.toggle("open");
-  document.getElementById("drawerOverlay")?.classList.toggle("show");
-}
+    document.addEventListener("DOMContentLoaded", () => {
 
-function openSearch() {
-  const searchOverlay = document.getElementById("searchOverlay");
-  if (searchOverlay) {
-    searchOverlay.style.display = "flex";
-  }
-}
+        // 🔹 MENU TOGGLE
+        window.toggleMenu = function () {
+            document.getElementById("drawerMenu")?.classList.toggle("open");
+            document.getElementById("drawerOverlay")?.classList.toggle("show");
+        };
 
-function closeSearch() {
-  const searchOverlay = document.getElementById("searchOverlay");
-  if (searchOverlay) {
-    searchOverlay.style.display = "none";
-  }
-}
+        // 🔹 SEARCH OVERLAY
+        window.openSearch = function () {
+            const overlay = document.getElementById("searchOverlay");
+            if (overlay) overlay.style.display = "flex";
+        };
 
-document.querySelectorAll(".support-item button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const content = btn.nextElementSibling;
-    content.style.display =
-      content.style.display === "block" ? "none" : "block";
-  });
-});
+        window.closeSearch = function () {
+            const overlay = document.getElementById("searchOverlay");
+            if (overlay) overlay.style.display = "none";
+        };
 
-const missionImages = [
-  "/assets/mission1.jpg",
-  "/assets/mission2.jpg",
-  "/assets/mission3.jpg"
-];
+        // 🔹 SEARCH SUBMIT (Fuse redirect)
+        const form = document.getElementById("searchForm");
+        const input = document.getElementById("searchInput");
 
-const missionImg = document.getElementById("mission-slideshow");
+        form?.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const query = input.value.trim();
+            if (query !== "") {
+                window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+            }
+        });
 
-if (missionImg) {
-  let current = 0;
+        // 🔹 SUPPORT DROPDOWN TOGGLE
+        document.querySelectorAll(".support-item button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const item = btn.parentElement;
+                item.classList.toggle("active");
+            });
+        });
 
-  setInterval(() => {
-    missionImg.style.opacity = "0";
+        // 🔹 MISSION SLIDESHOW
+        const missionImages = [
+            "/assets/mission1.jpg",
+            "/assets/mission2.jpg",
+            "/assets/mission3.jpg"
+        ];
 
-    setTimeout(() => {
-      current = (current + 1) % missionImages.length;
-      missionImg.src = missionImages[current];
-      missionImg.style.opacity = "1";
-    }, 500);
-  }, 4200);
-}
+        const missionImg = document.getElementById("mission-slideshow");
+
+        if (missionImg) {
+            let current = 0;
+
+            setInterval(() => {
+                missionImg.style.opacity = "0";
+
+                setTimeout(() => {
+                    current = (current + 1) % missionImages.length;
+                    missionImg.src = missionImages[current];
+                    missionImg.style.opacity = "1";
+                }, 500);
+
+            }, 4200);
+        }
+
+    });
 </script>
 
 </body>

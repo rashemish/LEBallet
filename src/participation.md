@@ -5,28 +5,15 @@ permalink: "participation.html"
 ---
 
 <section class="inner-page">
-
-  <section class="hero rda-hero">
-    <img src="/assets/rda-hero.jpg" alt="Participation">
-
-    <div class="hero-content fade-in">
-      <h1>PARTICIPATION</h1>
+  <section>
+    <div>
+      <h1 class="inner-title">PARTICIPATION</h1>
     </div>
   </section>
 
   <section class="inner-content">
-    <h3>SUB HEADING</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-    <h3>SUB HEADING</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-    <h3>SUB HEADING</h3>
-    <ul>
-      <li>Lorem ipsum dolor sit amet</li>
-      <li>Lorem ipsum dolor sit amet</li>
-      <li>Lorem ipsum dolor sit amet</li>
-    </ul>
+    <p>Dancers interested in being part of our Regional Dance America Ensemble will take part in an exciting and rewarding season that includes auditioning for and performing in Erie’s Nutcracker Reimagined, our spring performance and Gala Night, and attending the RDA Regional Festival.</p><br>
+    <p>This is a unique opportunity to grow as an artist, perform in multiple productions, and represent Lake Erie Ballet Company in a dynamic regional setting alongside fellow dedicated dancers.</p><br>
+    <p>Be sure to indicate your interest by August 15 to be considered. Additional details regarding costs, fundraising opportunities, rehearsal schedules, and travel plans will be shared with those who are ready to take part in this incredible experience.</p>
   </section>
-
 </section>

@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --deep-brown: #160707;
     --soft-white: #F8EEED;
@@ -12,9 +13,11 @@
     --soft-teal: #9DC7C8;
     --soft-yellow: #F9E784;
 }
+
 body {
     background: black;
 }
+
 /*navigation bar*/
 .nav {
     position: absolute;
@@ -25,8 +28,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 1000;
 }
+
 .nav::before {
     content: "";
     position: absolute;
@@ -41,6 +45,7 @@ body {
     );
     z-index: -1;
 }
+
 /*menu drawer*/
 .drawer {
     position: fixed;
@@ -56,9 +61,11 @@ body {
     transition: transform 0.35s ease;
     z-index: 2000;
 }
+
 .drawer.open {
     transform: translateX(0);
 }
+
 .drawer a {
     color: #2E282A;
     text-decoration: none;
@@ -68,9 +75,11 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
 .drawer a.active {
     color: var(--soft-white);
 }
+
 .close-btn {
     position: absolute;
     top: 55px;
@@ -81,9 +90,11 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
+
 .close-btn:hover {
     transform: scale(1.1);
 }
+
 .drawer-overlay {
     position: fixed;
     top: 0;
@@ -96,10 +107,12 @@ body {
     transition: opacity 0.3s ease;
     z-index: 1500;
 }
+
 .drawer-overlay.show {
     opacity: 1;
     pointer-events: auto;
 }
+
 /*search bar*/
 .search-overlay {
     position: fixed;
@@ -112,22 +125,27 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .search-box {
     text-align: center;
 }
+
 .search-box input {
     padding: 10px;
     width: 300px;
     font-size: 18px;
 }
+
 .search-box button {
     margin-top: 10px;
     padding: 10px 20px;
 }
+
 .dropdown a.active {
     color: #f3c6d3;
     font-weight: bold;
 }
+
 .dropdown {
     position: absolute;
     top: 70px;
@@ -141,28 +159,33 @@ body {
     pointer-events: none;
     transition: all 0.3s ease;
 }
+
 .dropdown.show {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
+
 /*home button*/
 .logo img {
     height: 77px;
     width: auto;
     display: block;
 }
+
 .nav-icons {
     display: flex;
     align-items: center;
     gap: 40px;
 }
+
 .icon-btn {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
 }
+
 .icon {
     width: 26px;
     height: 26px;
@@ -172,21 +195,25 @@ body {
     fill: none;
     transition: all 0.25s ease;
 }
+
 .icon-btn:hover .icon {
     opacity: 0.7;
     transform: scale(1.1);
 }
+
 .hero {
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
+
 .hero > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
 .hero::after {
     content: "";
     position: absolute;
@@ -194,6 +221,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
 .hero-content {
     position: absolute;
     z-index: 2;
@@ -201,6 +229,7 @@ body {
     left: 8%;
     max-width: 800px;
 }
+
 .home-hero .hero-content h1 {
     font-size: 100px;
     color: var(--dusty-rose);
@@ -208,6 +237,7 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
 .hero-content p {
     font-size: 20px;
     color: var(--soft-white);
@@ -217,6 +247,7 @@ body {
     font-style: normal;
     line-height: 1.4;
 }
+
 .main-button {
     display: inline-block;
     margin-top: 25px;
@@ -228,10 +259,12 @@ body {
     font-family: "Instrument Serif", serif;
     transition: all 0.3s ease;
 }
+
 .main-button:hover {
     background: var(--soft-white);
     color: #2E282A;
 }
+
 .home-cards-section {
     background: var(--soft-white);
     color: #2E282A;
@@ -240,6 +273,7 @@ body {
     gap: 30px;
     padding: 80px 50px;
 }
+
 .home-card {
     background: white;
     overflow: hidden;
@@ -247,16 +281,19 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .home-card img {
     width: 100%;
     height: 260px;
     object-fit: cover;
     display: block;
 }
+
 .home-card-content {
     padding: 30px 25px;
     text-align: center;
 }
+
 .home-card-content h2 {
     font-size: 30px;
     margin-bottom: 12px;
@@ -264,21 +301,25 @@ body {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
 }
+
 .home-card-content p {
     font-size: 18px;
     line-height: 1.6;
     color: #2E282A;
     font-family: "Instrument Serif", serif;
 }
+
 .mission-page {
     background: var(--soft-white);
     color: #2E282A;
 }
+
 .mission-hero {
     height: 88vh;
     min-height: 640px;
     position: relative;
 }
+
 .mission-hero > img,
 #mission-slideshow {
     width: 100%;
@@ -289,6 +330,7 @@ body {
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
+
 .mission-hero::after {
     content: "";
     position: absolute;
@@ -301,10 +343,12 @@ body {
     );
     z-index: 1;
 }
+
 .mission-hero .hero-content {
     top: 46%;
     max-width: 920px;
 }
+
 .mission-hero-kicker {
     font-family: "Lexend", sans-serif;
     font-size: 14px;
@@ -314,6 +358,7 @@ body {
     margin-bottom: 14px;
     font-weight: 600;
 }
+
 .mission-hero .hero-content h1 {
     font-size: 118px;
     color: var(--soft-white);
@@ -322,6 +367,7 @@ body {
     font-weight: 400;
     text-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
 }
+
 .mission-intro-section {
     background: linear-gradient(
             to bottom,
@@ -331,10 +377,12 @@ body {
     padding: 90px 24px 80px;
     text-align: center;
 }
+
 .mission-intro-inner {
     max-width: 980px;
     margin: 0 auto;
 }
+
 .mission-eyebrow {
     font-size: 15px;
     letter-spacing: 3px;
@@ -344,6 +392,7 @@ body {
     font-family: "Lexend", sans-serif;
     font-weight: 600;
 }
+
 .mission-intro-inner h2 {
     font-size: 58px;
     line-height: 1.08;
@@ -352,6 +401,7 @@ body {
     font-weight: 400;
     margin-bottom: 24px;
 }
+
 .mission-intro-text {
     max-width: 760px;
     margin: 0 auto;
@@ -360,6 +410,7 @@ body {
     color: var(--deep-brown);
     font-family: "Instrument Serif", serif;
 }
+
 .mission-story-panel {
     min-height: 720px;
     display: flex;
@@ -370,26 +421,31 @@ body {
     background-repeat: no-repeat;
     position: relative;
 }
+
 .mission-story-panel::before {
     content: "";
     position: absolute;
     inset: 0;
 }
+
 .mission-panel-one {
     background-image:
             linear-gradient(rgba(22, 7, 7, 0.28), rgba(22, 7, 7, 0.28)),
             url("/assets/mission2.jpg");
 }
+
 .mission-panel-two {
     background-image:
             linear-gradient(rgba(127, 90, 131, 0.35), rgba(127, 90, 131, 0.35)),
             url("/assets/mission3.jpg");
 }
+
 .mission-panel-three {
     background-image:
             linear-gradient(rgba(157, 199, 200, 0.20), rgba(157, 199, 200, 0.20)),
             url("/assets/mission1.jpg");
 }
+
 .mission-overlay-card {
     position: relative;
     z-index: 2;
@@ -400,18 +456,23 @@ body {
     box-shadow: 0 18px 40px rgba(22, 7, 7, 0.15);
     border-top: 8px solid var(--soft-yellow);
 }
+
 .overlay-left {
     margin-right: auto;
 }
+
 .overlay-right {
     margin-left: auto;
 }
+
 .mission-panel-two .mission-overlay-card {
     border-top-color: var(--muted-purple);
 }
+
 .mission-panel-three .mission-overlay-card {
     border-top-color: var(--soft-teal);
 }
+
 .story-label {
     display: inline-block;
     width: fit-content;
@@ -426,12 +487,15 @@ body {
     color: var(--deep-brown);
     background: rgba(249, 231, 132, 0.45);
 }
+
 .mission-panel-two .story-label {
     background: rgba(201, 166, 161, 0.42);
 }
+
 .mission-panel-three .story-label {
     background: rgba(157, 199, 200, 0.40);
 }
+
 .mission-overlay-card h3 {
     font-size: 52px;
     line-height: 1.08;
@@ -440,26 +504,31 @@ body {
     margin-bottom: 24px;
     color: var(--muted-purple);
 }
+
 .mission-overlay-card p:last-child {
     font-size: 21px;
     line-height: 1.82;
     font-family: "Instrument Serif", serif;
     color: #2E282A;
 }
+
 /*regional dance america page*/
 .rda-page {
     background: #f4efec;
     color: #1c2b33;
 }
+
 .rda-hero .hero-content h1 {
     font-size: 70px;
     font-family: "Orelega One", serif;
     font-weight: 400;
     color: #f4efec;
 }
+
 .rda-intro {
     padding: 80px 10%;
 }
+
 .rda-intro h2 {
     font-size: 30px;
     font-family: "Lexend", sans-serif;
@@ -468,6 +537,7 @@ body {
     margin-bottom: 20px;
     text-align: right;
 }
+
 .rda-intro h3 {
     font-size: 30px;
     font-family: "Lexend", sans-serif;
@@ -476,6 +546,7 @@ body {
     margin: 40px 0 20px;
     text-align: left;
 }
+
 .rda-page .rda-intro p {
     font-family: "Lexend", sans-serif;
     font-weight: 400;
@@ -485,6 +556,7 @@ body {
     margin: 0 auto 0 0;
     text-align: left;
 }
+
 .rda-intro .rda-grid {
     display: flex;
     justify-content: center;
@@ -492,18 +564,21 @@ body {
     flex-wrap: wrap;
     margin-top: 50px;
 }
+
 .rda-intro .rda-card {
     width: 280px;
     text-decoration: none;
     color: #1c2b33;
     transition: transform 0.3s ease;
 }
+
 .rda-intro .rda-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
 }
+
 .rda-intro .rda-card h4 {
     margin-top: 14px;
     font-size: 14px;
@@ -511,42 +586,52 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
 }
+
 .rda-intro .rda-card:hover {
     transform: translateY(-6px);
 }
+
 /* INNER PAGES */
+
 .inner-page {
     background: var(--soft-white);
     color: #1f2a30;
 }
+
 .inner-content {
     max-width: 900px;
     margin: auto;
     padding: 80px 40px;
 }
+
 .inner-content h3 {
     margin-top: 40px;
     margin-bottom: 15px;
     font-size: 28px;
     font-family: "Lexend", sans-serif;
 }
+
 .inner-content p,
 .inner-content li {
     line-height: 1.8;
     font-family: "Lexend", sans-serif;
 }
+
 .inner-content ul {
     padding-left: 20px;
 }
+
 /*support*/
 .support-page {
     background: #B9DAE1;
     color: #1f2a30;
 }
+
 .support-hero {
     position: relative;
     z-index: 1;
 }
+
 .support-hero .hero-content h1 {
     margin-top: 37vh;
     font-size: 110px;
@@ -555,6 +640,7 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
 .support-intro {
     position: relative;
     margin-top: -100px;
@@ -563,12 +649,14 @@ body {
     text-align: center;
     z-index: 2;
 }
+
 .support-intro h2 {
     margin-bottom: 25px;
     font-size: 30px;
     font-family: "Lexend", sans-serif;
     font-weight: 700;
 }
+
 .support-intro p {
     max-width: 700px;
     margin: 0 auto 70px;
@@ -577,36 +665,44 @@ body {
     font-weight: 400;
     font-size: 16px
 }
+
 .support-image {
     display: inline-block;
 }
+
 .support-image img {
     width: 100%;
     max-width: 800px;
     display: block;
 }
+
 .support-ways {
     text-align: center;
     padding: 50px 50px;
 }
+
 .support-ways h3 {
     margin-bottom: 40px;
     font-size: 30px;
     font-family: "Lexend", sans-serif;
     font-weight: 700;
 }
+
 .support-accordion {
     max-width: 800px;
     margin: 0 auto;
     border-top: 2px solid #1f2a30;
 }
+
 .support-item {
     border-top: none;
     border-bottom: 2px solid #1f2a30;
 }
+
 .support-item:last-child {
     border-bottom: 2px solid #1f2a30;
 }
+
 .support-item button {
     width: 100%;
     padding: 25px 10px;
@@ -620,12 +716,14 @@ body {
     font-family: "Lexend", sans-serif;
     font-weight: 500;
 }
+
 .support-item .content {
     display: none;
     padding: 10px 0 30px;
     font-family: "Lexend", sans-serif;
     font-weight: 400;
 }
+
 .support-item .content p {
     font-family: "Lexend", sans-serif;
     font-weight: 400;
@@ -635,6 +733,7 @@ body {
     color: #1f2a30;
     padding: 0 10px;
 }
+
 .support-item img {
     width: 70%;
     max-width: 800px;
@@ -642,16 +741,16 @@ body {
     display: block;
     margin: 15px auto 10px;
 }
+
 /*gallery styles*/
 .column-gallery {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
     background: #B9DAE1;
-    box-sizing: border-box;
 }
 .container {
-    display: flex;
+    display: block;
     position: relative;
     color: white;
     z-index: 1;
@@ -681,46 +780,6 @@ h1.galHead {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-.info-search-box {
-    display: flex;
-    background: #4590a1;
-    height: 10vh;
-    justify-content: center;
-    align-content: center;
-}
-.card-info-center {
-    display: flex;
-    margin: 10px auto;
-    padding: 10px;
-    justify-content: center;
-    align-content: center;
-}
-.gall-button {
-    display: inline-block;
-    margin: 10px 5px;
-    padding: 14px 20px;
-    background: #B9DAE1;
-    color: #2E282A;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: "Instrument Serif", serif;
-    transition: all 0.3s ease;
-}
-.hero-content-gallery {
-    position: absolute;
-    z-index: 2;
-    top: 35%;
-    left: 8%;
-    max-width: 800px;
-}
-.staff-hero .hero-content-gallery h1 {
-    margin-top: 5vh;
-    font-size: 110px;
-    color: #B9DAE1;
-    font-family: "Orelega One", serif;
-    font-weight: 400;
-    font-style: normal;
 }
 .box {
     display: block;
@@ -823,10 +882,12 @@ div.gallery img {
     flex-direction: column;
     background: #7f5a83;
 }
+
 .staff-hero {
     position: relative;
     z-index: 1;
 }
+
 .staff-hero .hero-content h1 {
     margin-top: 5vh;
     font-size: 110px;
@@ -835,11 +896,13 @@ div.gallery img {
     font-weight: 400;
     font-style: normal;
 }
+
 .blank {
     height: 35vh;
     position: relative;
     overflow: hidden;
 }
+
 .blank::after {
     content: "";
     position: absolute;
@@ -847,35 +910,41 @@ div.gallery img {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
 .container-begin {
     display: inline-flex;
     justify-content: center;
     align-content: flex-start;
     padding: 20px 0 0 0;
 }
+
 .container-mid {
     display: inline-flex;
     justify-content: center;
     align-content: flex-start;
     padding: 0 ;
 }
+
 .container-end {
     display: inline-flex;
     justify-content: center;
     align-content: flex-start;
     padding: 0 0 20px 0;
 }
+
 .container-single {
     display: inline-flex;
     justify-content: center;
     align-content: flex-start;
     padding: 20px 0;
 }
+
 .card-info-left {
     width: 50%;
     height: auto;
     margin: 10px auto 10px 15px;
 }
+
 .card-img-left {
     display: flex;
     width: 23%;
@@ -883,6 +952,7 @@ div.gallery img {
     margin: 0 auto 10px 35vh;
     justify-content: center;
 }
+
 .card-info-right {
     width: 38%;
     height: auto;
@@ -897,12 +967,14 @@ div.gallery img {
 .card-info-right p {
     margin-block-end: 0;
 }
+
 .img-sizing {
     width: 100%;
     height: auto;
     margin: 10px 15px;
     object-fit: contain;
 }
+
 h1.text-title {
     font-size: 70px;
     color: var(--soft-white);
@@ -911,6 +983,7 @@ h1.text-title {
     font-weight: 400;
     text-align: center;
 }
+
 h1.text-heading {
     font-size: 70px;
     color: var(--soft-white);
@@ -918,6 +991,7 @@ h1.text-heading {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
 }
+
 h2.text-subheading {
     font-size: 50px;
     color: var(--soft-white);
@@ -925,6 +999,7 @@ h2.text-subheading {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
 }
+
 p.text-para {
     font-size: 17px;
     color: var(--soft-white);
@@ -934,43 +1009,52 @@ p.text-para {
     text-align: left;
     text-indent: 50px;
 }
+
 div.list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 div.list-item {
     margin: 30px 5px;
     width: 250px;
     background-color: #C9A6A1;
 }
+
 div.list-item:hover {
     border: none;
     cursor: pointer;
     text-decoration: underline;
 }
+
 img.list-item {
     width: 100%;
     height: auto;
 }
+
 .name {
     font: 18px Georgia, Sans-Serif;
     padding: 3px;
 }
+
 .role {
     font: 16px Georgia, Sans-Serif;
     padding: 3px;
 }
+
 a.staff {
     text-decoration: none;
     color: #fffafa;
 }
+
 /*footer styles*/
 .footer {
     background: var(--dusty-rose);
     padding: 60px 40px 30px;
     color: #1f2a30;
 }
+
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -979,13 +1063,16 @@ a.staff {
     margin: 0 auto;
     gap: 30px;
 }
+
 .footer-left {
     max-width: 250px;
 }
+
 .footer-logo {
     width: 280px;
     margin-bottom: 20px;
 }
+
 .address {
     font-size: 20px;
     line-height: 1.6;
@@ -993,11 +1080,13 @@ a.staff {
     font-weight: 400;
     font-style: normal;
 }
+
 .footer-links {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
+
 .footer-links a {
     color: #1f2a30;
     text-decoration: underline;
@@ -1007,14 +1096,17 @@ a.staff {
     font-weight: 400;
     font-style: normal;
 }
+
 .footer-links a:hover {
     opacity: 0.7;
 }
+
 .footer-social {
     display: flex;
     gap: 25px;
     align-items: center;
 }
+
 .social-icon {
     width: 28px;
     height: 28px;
@@ -1024,10 +1116,12 @@ a.staff {
     stroke-linejoin: round;
     transition: 0.2s ease;
 }
+
 .footer-social a:hover .social-icon {
     transform: scale(1.1);
     opacity: 0.7;
 }
+
 .footer-bottom {
     text-align: center;
     margin-top: 60px;
@@ -1036,63 +1130,77 @@ a.staff {
     font-weight: 400;
     font-style: normal;
 }
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 2s ease forwards;
 }
+
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
+
 @media (max-width: 900px) {
     .hero-content h1,
     .mission-hero .hero-content h1,
     .support-hero .hero-content h1 {
         font-size: 60px;
     }
+
     .hero-content p {
         font-size: 18px;
     }
+
     .home-cards-section {
         grid-template-columns: 1fr;
         padding: 60px 25px;
     }
+
     .mission-hero {
         min-height: 520px;
         height: 72vh;
     }
+
     .mission-hero .hero-content h1 {
         font-size: 62px;
         letter-spacing: 4px;
     }
+
     .mission-hero-kicker {
         font-size: 12px;
         letter-spacing: 3px;
     }
+
     .mission-intro-section {
         padding: 65px 24px 60px;
     }
+
     .mission-intro-inner h2 {
         font-size: 40px;
     }
+
     .mission-intro-text {
         font-size: 19px;
     }
+
     .mission-story-panel {
         min-height: 620px;
         padding: 28px 18px;
         align-items: flex-end;
     }
+
     .mission-overlay-card {
         max-width: 100%;
         padding: 28px 22px;
     }
+
     .mission-overlay-card h3 {
         font-size: 36px;
     }
+
     .mission-overlay-card p:last-child {
         font-size: 18px;
         line-height: 1.72;
     }
-}
