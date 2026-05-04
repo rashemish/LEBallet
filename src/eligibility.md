@@ -1,17 +1,22 @@
 ---
 layout: layouts/base.njk
-title: Eligibility
+title: Eligibility | L.E. Ballet
 permalink: "eligibility.html"
 ---
 
-# ELIGIBILITY
+<section class="inner-page">
 
-## SUB HEADING
-Lorem ipsum...
+  <section class="hero rda-hero">
+    <img src="/assets/rda-hero.jpg" alt="Eligibility">
 
-## SUB HEADING
-Lorem ipsum...
+    <div class="hero-content fade-in">
+      <h1>ELIGIBILITY</h1>
+    </div>
+  </section>
 
-## SUB HEADING
-- Item 1
-- Item 2
+  <section class="inner-content">
+    <h3>SUB HEADING</h3>
+    <p>Add eligibility content here.</p>
+  </section>
+
+</section>

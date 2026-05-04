@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d _site"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/rashemish/LEBallet/issues"
   },
-  "homepage": "https://github.com/rashemish/LEBallet#readme",
+  "homepage": "https://github.com/rashemish/LEBallet/index.html#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
