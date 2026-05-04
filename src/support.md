@@ -4,23 +4,22 @@ title: Support | LEBallet
 permalink: "support.html"
 ---
 <section class="support-page">
- <section class="hero support-hero">
-    <img src="assets/support_page.png" alt="Erie's Nutcracker Performance">
-    <div class="hero-content fade-in">
-      <h1>SUPPORT</h1>
-    </div>
-  </section>
+    <section class="page-hero">
+        <img src="/assets/support_page.png" alt="Erie's Nutcracker Performance">
+        <div class="page-hero-content fade-in">
+        <h1 style="color:#F8EEED; font-size: 80px;">SUPPORT</h1>
+        </div>
+    </section>
   <section class="support-intro">
     <h2>IGNITE A BOLD, ARTISTIC FUTURE</h2>
     <p>Your support makes it possible for Lake Erie Ballet Company to inspire, educate, and enrich our community through the art of dance. Whether you choose to give, partner, or participate, every contribution plays a meaningful role in sustaining our dancers, performances, and programs.</p>
     <div class="support-image">
-      <img src="{{ '/assets/support_page_2.png' | url }}" alt="Ballerina">
+      <img src="{{ '/assets/support_page_2.jpg' | url }}" alt="Ballerina">
     </div>
   </section>
   <section class="support-ways">
     <h3>WAYS TO GIVE</h3>
     <div class="support-accordion">
-
       <div class="support-item">
         <button>DONATE
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
@@ -60,7 +59,6 @@ permalink: "support.html"
           </p>
         </div>
       </div>
-
     </div>
   </section>
 </section>

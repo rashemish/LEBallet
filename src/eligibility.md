@@ -6,11 +6,9 @@ permalink: "eligibility.html"
 
 <section class="inner-page">
 
-  <section class="hero rda-hero">
-    <img src="/assets/rda-hero.jpg" alt="Eligibility">
-
-    <div class="hero-content fade-in">
-      <h1>ELIGIBILITY</h1>
+  <section>
+    <div>
+      <h1 class="inner-title">ELIGIBILITY</h1>
     </div>
   </section>
 

@@ -1,0 +1,74 @@
+---
+layout: layouts/base.njk
+title: Search
+permalink: "/search/"
+---
+<body class="search-page">
+<section class="search-results">
+    <h1>Search Results:</h1>
+    <div id="results"></div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const pages = [
+            { title: "Home", url: "/", content: "lake erie ballet company dancers performance", description: "Check out the Lake Erie Ballet Company home page..." },
+            { title: "Mission", url: "/mission.html", content: "ballet company dancers training mission", description: "Learn about our mission, training, and artistic vision..." },
+            { title: "Events", url: "/events.html", content: "performances gala nutcracker ballet", description: "View upcoming performances including The Erie Nutcracker and fundraising events..." },
+            { title: "Regional Dance America", url: "/regional-dance-america.html", content: "regional dance america information", description: "Find information about our involvement with Regional Dance America..." },
+            { title: "Contact", url: "/contact.html", content: "contact erie ballet address", description: "Get in touch and locate the Lake Erie Ballet Company..." },
+            { title: "Staff", url: "/staff.html", content: "directors dancers company ballet", description: "Meet our directors, dancers, and leadership team..." },
+            { title: "Gallery", url: "/gallery.html", content: "photos performances dancers", description: "Browse photos from performances and rehearsals..." },
+            { title: "Participation", url: "/participation.html", content: "participation ballet", description: "Learn how dancers are involved here at the Lake Erie Ballet Company..." },
+            { title: "Support", url: "/support.html", content: "support donations ballet", description: "Support the ballet through donations and sponsorships..." },
+            { title: "Eligibility", url: "/eligibility.html", content: "eligibility ballet", description: "Find out eligibility requirements for dancers..." },
+            { title: "Commitment", url: "/commitment.html", content: "commitment ballet", description: "Understand the expectations and commitments required of dancers..." },
+            { title: "Jonathan", url: "/MD-JM.html", content: "Jonathan Moser Musical Director Conductor", description: "Meet Jonathan Moser, Musical Director and Conductor..." },
+            { title: "Elizabeth", url: "/ED-EY.html", content: "Elizabeth Young Executive Director", description: "Meet Elizabeth Young, Executive Director..." },
+            { title: "Christina", url: "/AD-CM.html", content: "Christina Maria Artistic Director", description: "Meet Christina Maria, Artistic Director..." },
+            { title: "Erin", url: "/MD-EB.html", content: "Erin Bizzaro Marketing Director", description: "Meet Erin Bizzaro, Marketing Director..." }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q");
+
+        const resultsEl = document.getElementById("results");
+
+        const highlight = (text, query) => {
+            if (!query) return text;
+            const regex = new RegExp(`(${query})`, "gi");
+            return text.replace(regex, `<span class="highlight">$1</span>`);
+        };
+
+        if (!query) {
+            resultsEl.innerHTML = "<p>Type something in the search bar to see results.</p>";
+            return;
+        }
+
+        const fuse = new Fuse(pages, {
+            keys: ["title", "content"],
+            threshold: 0.4
+        });
+
+        const results = fuse.search(query);
+
+        if (results.length === 0) {
+            resultsEl.innerHTML = `<p>No results found for "${query}"</p>`;
+        } else {
+            resultsEl.innerHTML = results.map(result => {
+                const page = result.item;
+                return `
+        <div class="search-result-card">
+          <a href="${page.url}">
+            <h2>${highlight(page.title, query)}</h2>
+            <p>${page.description}</p>
+          </a>
+        </div>
+      `;
+            }).join("");
+        }
+
+    });
+</script>
+</body>

@@ -1,44 +1,15 @@
 ---
 layout: layouts/base.njk
-title: Gallery | LEBallet
-permalink: "gallery.html"
+title: Spring Gala | LEBallet
+permalink: "gala.html"
 ---
 <div class="column-gallery">
-    <div class="container">
-        <img src="{{ 'assets/all-blur.jpg' | url }}" class="title"/>
-        <div class="centered">
-            <h1 class="galHead">Lake Erie Ballet Company</h1>
-            <p class="galPara">Gallery</p>
+    <section class="blank staff-hero">
+        <div class="hero-content-gallery">
+            <h1>Spring Gala</h1>
         </div>
-    </div>
-    <div class="info-search-box"> 
-        <div class="card-info-center">
-            <a href="nutcracker.html" class="gall-button">Nutcracker</a>
-            <a href="gala.html" class="gall-button">Spring Gala</a>
-            <a href="art.html" class="gall-button">Art of Dance</a>
-        </div> 
-    </div> 
+    </section>
     <div class="box">
-        <div class="responsive">
-            <div class="gallery">
-                <img src="{{ 'assets/jump1.webp' | url }}" class="target" alt="Forest">
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <img src="{{ 'assets/jump2.webp' | url }}" class="target" alt="Forest">
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <img src="{{ 'assets/jump3.webp' | url }}" class="target" alt="Forest">
-            </div>
-        </div>
-        <div class="responsive">
-            <div class="gallery">
-                <img src="{{ 'assets/diavolo.webp' | url }}" class="target" alt="Forest">
-            </div>
-        </div>
         <div class="responsiveLong">
             <div class="gallery">
                 <img src="{{ 'assets/headshot1.webp' | url }}" class="target" alt="Forest"/>
