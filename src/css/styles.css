@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 10;
 }
 .nav::before {
     content: "";
@@ -425,17 +425,22 @@ body {
 .mission-panel-one {
     background-image:
             linear-gradient(rgba(22, 7, 7, 0.28), rgba(22, 7, 7, 0.28)),
-            url("../assets/mission2.jpg");
+            url("../assets/RKP_0512.jpg");
 }
+
 .mission-panel-two {
     background-image:
             linear-gradient(rgba(127, 90, 131, 0.35), rgba(127, 90, 131, 0.35)),
             url("../assets/mission3.jpg");
+
+    background-size: cover;
+    background-position: center;
 }
+
 .mission-panel-three {
     background-image:
             linear-gradient(rgba(157, 199, 200, 0.20), rgba(157, 199, 200, 0.20)),
-            url("../assets/mission1.jpg");
+            url("../assets/photo_credit_rich_klein_1.jpg");
 }
 .mission-overlay-card {
     position: relative;
@@ -681,7 +686,7 @@ body {
     background: #B9DAE1;
 }
 .container {
-    display: block;
+    display: flex;
     position: relative;
     color: white;
     z-index: 1;
@@ -726,11 +731,37 @@ h1.galHead {
     justify-content: center;
     align-content: center;
 }
-button.gal{
-    padding: 10px 6px;
-    margin: 5px;
+.card-button {
+    align-content: center;
+}
+.gall-button {
+    padding: 12px 6px;
+    margin: 0 5px;
     background: #B9DAE1;
     border: none;
+    display: flex;
+    color: #2E282A;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Instrument Serif", serif;
+}
+.gall-button:hover {
+    background: #dbecf0;
+}
+.hero-content-gallery h1 {
+    margin-top: 5vh;
+    font-size: 110px;
+    color: #B9DAE1;
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.hero-content-gallery {
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 8%;
+    max-width: 800px;
 }
 .box {
     display: block;
