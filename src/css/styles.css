@@ -378,17 +378,22 @@ body {
 .mission-panel-one {
     background-image:
             linear-gradient(rgba(22, 7, 7, 0.28), rgba(22, 7, 7, 0.28)),
-            url("../assets/mission2.jpg");
+            url("../assets/RKP_0512.jpg");
 }
+
 .mission-panel-two {
     background-image:
             linear-gradient(rgba(127, 90, 131, 0.35), rgba(127, 90, 131, 0.35)),
             url("../assets/mission3.jpg");
+
+    background-size: cover;
+    background-position: center;
 }
+
 .mission-panel-three {
     background-image:
             linear-gradient(rgba(157, 199, 200, 0.20), rgba(157, 199, 200, 0.20)),
-            url("../assets/mission1.jpg");
+            url("../assets/photo_credit_rich_klein_1.jpg");
 }
 .mission-overlay-card {
     position: relative;
