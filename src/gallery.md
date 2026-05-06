@@ -13,9 +13,15 @@ permalink: "gallery.html"
     </div>
     <div class="info-search-box"> 
         <div class="card-info-center">
-            <a href="nutcracker.html" class="gall-button">Nutcracker</a>
-            <a href="gala.html" class="gall-button">Spring Gala</a>
-            <a href="art.html" class="gall-button">Art of Dance</a>
+            <div class="card-button">
+                <a href="nutcracker.html" class="gall-button">Nutcracker</a>
+            </div>
+            <div class="card-button">
+                <a href="gala.html" class="gall-button">Spring Gala</a>
+            </div>
+            <div class="card-button">
+                <a href="art.html" class="gall-button">Art of Dance</a>
+            </div>
         </div> 
     </div> 
     <div class="box">
